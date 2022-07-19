@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 // Components
 import Menu from "./components/Menu";
+import Navbar from "./components/Navbar";
 
 const Container = styled.div``;
 
@@ -12,7 +13,9 @@ function App() {
   return (
     <Container>
       <Menu />
-      <Main></Main>
+      <Main>
+        <Navbar />
+      </Main>
     </Container>
   );
 }
