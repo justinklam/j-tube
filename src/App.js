@@ -8,6 +8,7 @@ import Navbar from "./components/Navbar";
 const Container = styled.div``;
 
 const Main = styled.div``;
+const Wrapper = styled.div``;
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Menu />
       <Main>
         <Navbar />
+        <Wrapper>Cards</Wrapper>
       </Main>
     </Container>
   );
