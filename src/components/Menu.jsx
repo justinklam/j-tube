@@ -8,8 +8,16 @@ const Container = styled.div`
   color: white;
 `;
 
+const Wrapper = styled.div`
+  padding: 18px 26px;
+`;
+
 const Menu = () => {
-  return <Container>Menu</Container>;
+  return (
+    <Container>
+      <Wrapper>Items</Wrapper>
+    </Container>
+  );
 };
 
 export default Menu;
