@@ -1,6 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 
+// Image Asset
+import logo from "../img/logo.png";
+
 const Container = styled.div`
   flex: 1;
   background-color: #202020;
@@ -27,7 +30,8 @@ const Menu = () => {
     <Container>
       <Wrapper>
         <Logo>
-          <Img>J-Tube</Img>
+          <Img src={logo} />
+          J-Tube
         </Logo>
       </Wrapper>
     </Container>
