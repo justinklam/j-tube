@@ -12,10 +12,24 @@ const Wrapper = styled.div`
   padding: 18px 26px;
 `;
 
+const Logo = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 5px;
+`;
+
+const Img = styled.img`
+  height: 25px;
+`;
+
 const Menu = () => {
   return (
     <Container>
-      <Wrapper>Items</Wrapper>
+      <Wrapper>
+        <Logo>
+          <Img>J-Tube</Img>
+        </Logo>
+      </Wrapper>
     </Container>
   );
 };
