@@ -20,7 +20,9 @@ function App() {
       <Menu />
       <Main>
         <Navbar />
-        <Wrapper>Cards</Wrapper>
+        <Wrapper>
+          <h1>Placeholder</h1>
+        </Wrapper>
       </Main>
     </Container>
   );
