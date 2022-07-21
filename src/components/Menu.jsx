@@ -9,6 +9,7 @@ const Container = styled.div`
   background-color: #202020;
   height: 100vh;
   color: white;
+  font-size: 14px;
 `;
 
 const Wrapper = styled.div`
@@ -27,6 +28,13 @@ const Img = styled.img`
   height: 25px;
 `;
 
+const Item = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+`;
+
 const Menu = () => {
   return (
     <Container>
@@ -35,6 +43,7 @@ const Menu = () => {
           <Img src={logo} />
           J-Tube
         </Logo>
+        <Item>Home</Item>
       </Wrapper>
     </Container>
   );
