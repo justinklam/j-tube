@@ -1,4 +1,7 @@
+import { useState } from "react";
 import "./App.css";
+
+// Styling
 import styled, { ThemeProvider } from "styled-components";
 import { darkTheme, lightTheme } from "./utils/Theme";
 
@@ -17,8 +20,10 @@ const Main = styled.div`
 const Wrapper = styled.div``;
 
 function App() {
+  const [darkMode, setDarkMode] = useState(true);
+
   return (
-    <ThemeProvider theme={darkTheme}>
+    <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
       <Container>
         <Menu />
         <Main>
