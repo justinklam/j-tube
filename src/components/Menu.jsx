@@ -77,7 +77,7 @@ const Button = styled.button`
   gap: 5px;
 `;
 
-const Menu = () => {
+const Menu = ({ darkMode, setDarkMode }) => {
   return (
     <Container>
       <Wrapper>
