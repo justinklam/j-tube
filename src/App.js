@@ -1,6 +1,6 @@
 import "./App.css";
 import styled, { ThemeProvider } from "styled-components";
-import { darkTheme } from "../utils/Theme";
+import { darkTheme, lightTheme } from "./utils/Theme";
 
 // Components
 import Menu from "./components/Menu";
