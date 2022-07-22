@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { darkTheme, lightTheme } from "../utils/Theme";
 
 // Image Asset
 import logo from "../img/logo.png";
@@ -24,7 +25,7 @@ import SettingsBrightnessOutlinedIcon from "@mui/icons-material/SettingsBrightne
 
 const Container = styled.div`
   flex: 1;
-  background-color: #202020;
+  background-color: ${({ theme }) => theme.bg};
   height: 100vh;
   color: white;
   font-size: 14px;
