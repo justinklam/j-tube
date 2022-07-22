@@ -1,5 +1,6 @@
 import "./App.css";
-import styled from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
+import { darkTheme } from "../utils/Theme";
 
 // Components
 import Menu from "./components/Menu";
@@ -17,15 +18,17 @@ const Wrapper = styled.div``;
 
 function App() {
   return (
-    <Container>
-      <Menu />
-      <Main>
-        <Navbar />
-        <Wrapper>
-          <h1>Placeholder</h1>
-        </Wrapper>
-      </Main>
-    </Container>
+    <ThemeProvider theme={darkTheme}>
+      <Container>
+        <Menu />
+        <Main>
+          <Navbar />
+          <Wrapper>
+            <h1>Placeholder</h1>
+          </Wrapper>
+        </Main>
+      </Container>
+    </ThemeProvider>
   );
 }
 
