@@ -5,9 +5,16 @@ import styled from "styled-components";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 
-const Container = styled.div``;
+const Container = styled.div`
+  position: sticky;
+  top: 0;
+  background-color: ${({ theme }) => theme.bgLighter};
+`;
 
-const Wrapper = styled.div``;
+const Wrapper = styled.div`
+  display: flex;
+  align-items: center;
+`;
 
 const Search = styled.div``;
 
