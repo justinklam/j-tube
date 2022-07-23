@@ -1,6 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 
+// MUI
+import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
+
 const Container = styled.div``;
 
 const Wrapper = styled.div``;
@@ -24,7 +27,17 @@ const Button = styled.button`
 `;
 
 const Navbar = () => {
-  return <div>Navbar</div>;
+  return (
+    <Container>
+      <Wrapper>
+        <Search> </Search>
+        <Button>
+          <AccountCircleOutlinedIcon />
+          SIGN IN
+        </Button>
+      </Wrapper>
+    </Container>
+  );
 };
 
 export default Navbar;
