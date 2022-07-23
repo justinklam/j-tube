@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { darkTheme, lightTheme } from "../utils/Theme";
 
 // Image Asset
 import logo from "../img/logo.png";
@@ -157,7 +156,8 @@ const Menu = ({ darkMode, setDarkMode }) => {
           <HelpOutlineOutlinedIcon />
           Help
         </Item>
-        <Item>
+        {/* setDarkMode true/false */}
+        <Item onClick={() => setDarkMode(!darkMode)}>
           <SettingsBrightnessOutlinedIcon />
           Light Mode
         </Item>
