@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 // MUI
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
+import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 
 const Container = styled.div``;
 
@@ -30,7 +31,10 @@ const Navbar = () => {
   return (
     <Container>
       <Wrapper>
-        <Search> </Search>
+        <Search>
+          <Input placeholder="Search" />
+          <SearchOutlinedIcon />
+        </Search>
         <Button>
           <AccountCircleOutlinedIcon />
           SIGN IN
