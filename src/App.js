@@ -15,7 +15,7 @@ const Container = styled.div`
 
 const Main = styled.div`
   flex: 7;
-  background-color: #181818;
+  background-color: ${({ theme }) => theme.bg};
 `;
 const Wrapper = styled.div``;
 
