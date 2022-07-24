@@ -12,14 +12,23 @@ const Container = styled.div`
   height: 56px;
 `;
 
+// position relative is needed in parent component in cases of absolute position
 const Wrapper = styled.div`
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   height: 100%;
   padding: 0px 20px;
+  position: relative;
 `;
 
-const Search = styled.div``;
+const Search = styled.div`
+  width: 40%;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+`;
 
 const Input = styled.input``;
 
