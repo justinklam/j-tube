@@ -23,11 +23,16 @@ const Wrapper = styled.div`
 `;
 
 const Search = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   width: 40%;
   position: absolute;
   left: 0px;
   right: 0px;
   margin: auto;
+  padding: 5px;
+  border: 1px solid #ccc;
 `;
 
 const Input = styled.input``;
