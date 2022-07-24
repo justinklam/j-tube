@@ -48,7 +48,6 @@ const Button = styled.button`
   color: #3ea6ff;
   border-radius: 3px;
   font-weight: 500;
-  margin-top: 10px;
   cursor: pointer;
   display: flex;
   align-items: center;
