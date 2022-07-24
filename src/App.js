@@ -35,9 +35,9 @@ function App() {
             <Wrapper>
               <Routes>
                 <Route path="/">
-                  <Route index element={Home}></Route>
+                  <Route index element={<Home />}></Route>
                   <Route path="video">
-                    <Route path=":id" element={Video}></Route>
+                    <Route path=":id" element={<Video />}></Route>
                   </Route>
                 </Route>
               </Routes>
