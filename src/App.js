@@ -37,11 +37,10 @@ function App() {
                 <Route path="/">
                   <Route index element={Home}></Route>
                   <Route path="video">
-                    <Route index element={Video}></Route>
+                    <Route path=":id" element={Video}></Route>
                   </Route>
                 </Route>
               </Routes>
-              <h1>Placeholder</h1>
             </Wrapper>
           </Main>
         </BrowserRouter>
