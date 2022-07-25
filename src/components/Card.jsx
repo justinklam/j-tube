@@ -7,8 +7,18 @@ const Container = styled.div`
   cursor: pointer;
 `;
 
+const Image = styled.img`
+  width: 100%;
+  height: 202px;
+  background-color: #999;
+`;
+
 const Card = () => {
-  return <Container>Card</Container>;
+  return (
+    <Container>
+      <Image src="https://i.ytimg.com/vi/IjMESxJdWkg/hq720_live.jpg?sqp=CKz--pYG-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAyQzog-iBzUmBVIP5l7wqAqErk4A" />
+    </Container>
+  );
 };
 
 export default Card;
