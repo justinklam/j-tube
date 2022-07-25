@@ -1,11 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 
-const Container = styled`
-`;
+const Container = styled.div``;
 
 const Card = () => {
-  return <Container>Home</Container>;
+  return <Container>Card</Container>;
 };
 
 export default Card;
