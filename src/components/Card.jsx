@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -43,17 +44,19 @@ color: ${({ theme }) => theme.textSoft};
 
 const Card = () => {
   return (
-    <Container>
-      <Image src="https://i.ytimg.com/vi/IjMESxJdWkg/hq720_live.jpg?sqp=CKz--pYG-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAyQzog-iBzUmBVIP5l7wqAqErk4A" />
-      <Details>
-        <ChannelImage src="https://images.pexels.com/photos/2071881/pexels-photo-2071881.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
-        <Texts>
-          <Title>Test</Title>
-          <ChannelName>J Dev</ChannelName>
-          <Info>100,000 views • 1 day ago</Info>
-        </Texts>
-      </Details>
-    </Container>
+    <Link to="/video/test">
+      <Container>
+        <Image src="https://i.ytimg.com/vi/IjMESxJdWkg/hq720_live.jpg?sqp=CKz--pYG-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAyQzog-iBzUmBVIP5l7wqAqErk4A" />
+        <Details>
+          <ChannelImage src="https://images.pexels.com/photos/2071881/pexels-photo-2071881.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+          <Texts>
+            <Title>Test</Title>
+            <ChannelName>J Dev</ChannelName>
+            <Info>100,000 views • 1 day ago</Info>
+          </Texts>
+        </Details>
+      </Container>
+    </Link>
   );
 };
 
