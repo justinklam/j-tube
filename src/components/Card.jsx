@@ -46,7 +46,7 @@ const Card = () => {
     <Container>
       <Image src="https://i.ytimg.com/vi/IjMESxJdWkg/hq720_live.jpg?sqp=CKz--pYG-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAyQzog-iBzUmBVIP5l7wqAqErk4A" />
       <Details>
-        <ChannelImage />
+        <ChannelImage src="https://images.pexels.com/photos/2071881/pexels-photo-2071881.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
         <Texts>
           <Title>Test</Title>
           <ChannelName>J Dev</ChannelName>
