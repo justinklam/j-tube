@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 // Image Asset
 import logo from "../img/logo.png";
@@ -87,10 +88,12 @@ const Menu = ({ darkMode, setDarkMode }) => {
   return (
     <Container>
       <Wrapper>
-        <Logo>
-          <Img src={logo} />
-          J-Tube
-        </Logo>
+        <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
+          <Logo>
+            <Img src={logo} />
+            J-Tube
+          </Logo>
+        </Link>
 
         <Item>
           <HomeIcon />
