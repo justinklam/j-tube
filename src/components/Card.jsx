@@ -36,7 +36,10 @@ const ChannelName = styled.h2`
   color: ${({ theme }) => theme.textSoft};
   margin: 9px 0px;
 `;
-const Info = styled.div``;
+const Info = styled.div`
+font-size: 14px
+color: ${({ theme }) => theme.textSoft};
+`;
 
 const Card = () => {
   return (
