@@ -26,12 +26,22 @@ const ChannelImage = styled.img`
   background-color: #999;
 `;
 
+const Texts = styled.div``;
+const Title = styled.h1``;
+const ChannelName = styled.h2``;
+const Info = styled.div``;
+
 const Card = () => {
   return (
     <Container>
       <Image src="https://i.ytimg.com/vi/IjMESxJdWkg/hq720_live.jpg?sqp=CKz--pYG-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAyQzog-iBzUmBVIP5l7wqAqErk4A" />
       <Details>
         <ChannelImage />
+        <Texts>
+          <Title>Test</Title>
+          <ChannelName>J Dev</ChannelName>
+          <Info>100,000 views • 1 day ago</Info>
+        </Texts>
       </Details>
     </Container>
   );
