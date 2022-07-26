@@ -44,7 +44,7 @@ color: ${({ theme }) => theme.textSoft};
 
 const Card = () => {
   return (
-    <Link to="/video/test">
+    <Link to="/video/test" style={{ textDecoration: "none" }}>
       <Container>
         <Image src="https://i.ytimg.com/vi/IjMESxJdWkg/hq720_live.jpg?sqp=CKz--pYG-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAyQzog-iBzUmBVIP5l7wqAqErk4A" />
         <Details>
