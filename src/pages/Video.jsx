@@ -10,6 +10,18 @@ const Content = styled.div`
   flex: 5;
 `;
 
+const VideoWrapper = styled.div``;
+
+const Title = styled.h1``;
+
+const Details = styled.div``;
+
+const Info = styled.span``;
+
+const Buttons = styled.div``;
+
+const Button = styled.div``;
+
 const Recommendation = styled.div`
   flex: 2;
 `;
@@ -17,7 +29,19 @@ const Recommendation = styled.div`
 const Video = () => {
   return (
     <Container>
-      <Content>Content</Content>
+      <Content>
+        <VideoWrapper>
+          <iframe
+            width="100%"
+            height="720"
+            src="https://www.youtube.com/embed/lTRiuFIWV54"
+            title="YouTube Video Player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </VideoWrapper>
+      </Content>
       <Recommendation>Recommendation</Recommendation>
     </Container>
   );
