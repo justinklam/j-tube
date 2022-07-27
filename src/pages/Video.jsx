@@ -6,12 +6,21 @@ const Container = styled.div`
   gap: 24px;
 `;
 
-const Content = styled.div``;
+const Content = styled.div`
+  flex: 5;
+`;
 
-const Recommendation = styled.div``;
+const Recommendation = styled.div`
+  flex: 2;
+`;
 
 const Video = () => {
-  return <div>Video</div>;
+  return (
+    <Container>
+      <Content>Content</Content>
+      <Recommendation>Recommendation</Recommendation>
+    </Container>
+  );
 };
 
 export default Video;
