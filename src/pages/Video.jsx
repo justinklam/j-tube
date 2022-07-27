@@ -41,6 +41,13 @@ const Video = () => {
             allowfullscreen
           ></iframe>
         </VideoWrapper>
+        <Title>Title</Title>
+        <Details>
+          <Info>100,000 views • Jul 07, 2022</Info>
+          <Buttons>
+            <Button>Button</Button>
+          </Buttons>
+        </Details>
       </Content>
       <Recommendation>Recommendation</Recommendation>
     </Container>
