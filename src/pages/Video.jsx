@@ -12,8 +12,13 @@ const Content = styled.div`
 
 const VideoWrapper = styled.div``;
 
-const Title = styled.h1``;
-
+const Title = styled.h1`
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: ${({ theme }) => theme.text};
+`;
 const Details = styled.div``;
 
 const Info = styled.span``;
