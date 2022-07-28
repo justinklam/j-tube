@@ -19,9 +19,16 @@ const Title = styled.h1`
   margin-bottom: 10px;
   color: ${({ theme }) => theme.text};
 `;
-const Details = styled.div``;
 
-const Info = styled.span``;
+const Details = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
+
+const Info = styled.span`
+  color: ${({ theme }) => theme.textSoft};
+`;
 
 const Buttons = styled.div``;
 
