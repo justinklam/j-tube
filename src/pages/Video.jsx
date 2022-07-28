@@ -51,6 +51,11 @@ const Button = styled.div`
   cursor: pointer;
 `;
 
+const Hr = styled.hr`
+  margin: 15px 0px;
+  border: 0.5px solid ${({ theme }) => theme.soft};
+`;
+
 const Recommendation = styled.div`
   flex: 2;
 `;
@@ -88,6 +93,7 @@ const Video = () => {
             </Button>
           </Buttons>
         </Details>
+        <Hr />
       </Content>
       <Recommendation>Recommendation</Recommendation>
     </Container>
