@@ -1,6 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 
+// MUI
+import { ThumbUpAltOutlined } from "@mui/icons-material";
+
 const Container = styled.div`
   display: flex;
   gap: 24px;
@@ -30,7 +33,11 @@ const Info = styled.span`
   color: ${({ theme }) => theme.textSoft};
 `;
 
-const Buttons = styled.div``;
+const Buttons = styled.div`
+  display: flex;
+  gap: 20px;
+  color: ${({ theme }) => theme.text};
+`;
 
 const Button = styled.div``;
 
@@ -57,6 +64,9 @@ const Video = () => {
         <Details>
           <Info>100,000 views • Jul 07, 2022</Info>
           <Buttons>
+            <Button>
+              <ThumbUpAltOutlined />
+            </Button>
             <Button>Button</Button>
           </Buttons>
         </Details>
