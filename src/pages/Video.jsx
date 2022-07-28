@@ -2,7 +2,10 @@ import React from "react";
 import styled from "styled-components";
 
 // MUI
-import { ThumbUpAltOutlined } from "@mui/icons-material";
+import {
+  ThumbDownOffAltOutlined,
+  ThumbUpAltOutlined,
+} from "@mui/icons-material";
 
 const Container = styled.div`
   display: flex;
@@ -65,9 +68,11 @@ const Video = () => {
           <Info>100,000 views • Jul 07, 2022</Info>
           <Buttons>
             <Button>
-              <ThumbUpAltOutlined />
+              <ThumbUpAltOutlined /> Like
             </Button>
-            <Button>Button</Button>
+            <Button>
+              <ThumbDownOffAltOutlined /> Dislike
+            </Button>
           </Buttons>
         </Details>
       </Content>
