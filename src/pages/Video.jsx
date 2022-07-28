@@ -3,6 +3,8 @@ import styled from "styled-components";
 
 // MUI
 import {
+  AddTaskOutlined,
+  ReplayOutlined,
   ThumbDownOffAltOutlined,
   ThumbUpAltOutlined,
 } from "@mui/icons-material";
@@ -68,10 +70,16 @@ const Video = () => {
           <Info>100,000 views • Jul 07, 2022</Info>
           <Buttons>
             <Button>
-              <ThumbUpAltOutlined /> Like
+              <ThumbUpAltOutlined /> 123
             </Button>
             <Button>
               <ThumbDownOffAltOutlined /> Dislike
+            </Button>
+            <Button>
+              <ReplayOutlined /> Share
+            </Button>
+            <Button>
+              <AddTaskOutlined /> Save
             </Button>
           </Buttons>
         </Details>
