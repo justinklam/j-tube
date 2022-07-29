@@ -70,6 +70,16 @@ const ChannelInfo = styled.div`
   justify-content: space-between;
 `;
 
+const Image = styled.img``;
+
+const ChannelDetails = styled.div``;
+
+const ChannelName = styled.span``;
+
+const ChannelCounter = styled.span``;
+
+const Description = styled.p``;
+
 const Subscribe = styled.button``;
 
 const Video = () => {
@@ -107,7 +117,14 @@ const Video = () => {
         </Details>
         <Hr />
         <Channel>
-          <ChannelInfo></ChannelInfo>
+          <ChannelInfo>
+            <Image src="https://yt3.ggpht.com/KNYElmLFGAOSZoBmxYGKKXhGHrT2e7Hmz3WsBerbam5uaDXFADAmT7htj3OcC-uK1O88lC9fQg=s88-c-k-c0x00ffffff-no-rj" />
+            <ChannelDetails>
+              <ChannelName>J-Tube</ChannelName>
+              <ChannelCounter>300k subscribers</ChannelCounter>
+              <Description>This is the description</Description>
+            </ChannelDetails>
+          </ChannelInfo>
           <Subscribe>Subscribe</Subscribe>
         </Channel>
       </Content>
