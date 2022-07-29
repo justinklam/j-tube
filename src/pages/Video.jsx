@@ -76,11 +76,22 @@ const Image = styled.img`
   border-radius: 50%;
 `;
 
-const ChannelDetails = styled.div``;
+const ChannelDetails = styled.div`
+display: flex;
+flex-direction; column;
+color: ${({ theme }) => theme.text};
+`;
 
-const ChannelName = styled.span``;
+const ChannelName = styled.span`
+  font-weight: 500;
+`;
 
-const ChannelCounter = styled.span``;
+const ChannelCounter = styled.span`
+  margin-top: 5px;
+  margin-bottom: 20px
+  color: ${({ theme }) => theme.textSoft};
+  font-size: 12px;
+`;
 
 const Description = styled.p``;
 
