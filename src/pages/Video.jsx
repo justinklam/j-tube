@@ -67,10 +67,14 @@ const Channel = styled.div`
 
 const ChannelInfo = styled.div`
   display: flex;
-  justify-content: space-between;
+  gap: 20px;
 `;
 
-const Image = styled.img``;
+const Image = styled.img`
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+`;
 
 const ChannelDetails = styled.div``;
 
