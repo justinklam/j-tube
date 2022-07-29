@@ -60,6 +60,18 @@ const Recommendation = styled.div`
   flex: 2;
 `;
 
+const Channel = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
+
+const ChannelInfo = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
+
+const Subscribe = styled.button``;
+
 const Video = () => {
   return (
     <Container>
@@ -94,6 +106,10 @@ const Video = () => {
           </Buttons>
         </Details>
         <Hr />
+        <Channel>
+          <ChannelInfo></ChannelInfo>
+          <Subscribe>Subscribe</Subscribe>
+        </Channel>
       </Content>
       <Recommendation>Recommendation</Recommendation>
     </Container>
