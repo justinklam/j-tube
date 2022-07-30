@@ -1,6 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 
+// Components
+import Comments from "../components/Comments";
+
 // MUI
 import {
   AddTaskOutlined,
@@ -153,6 +156,8 @@ const Video = () => {
           </ChannelInfo>
           <Subscribe>Subscribe</Subscribe>
         </Channel>
+        <Hr />
+        <Comments />
       </Content>
       <Recommendation>Recommendation</Recommendation>
     </Container>
