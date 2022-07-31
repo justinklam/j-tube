@@ -19,9 +19,15 @@ const Details = styled.div`
   gap: 10px;
 `;
 
-const Name = styled.span``;
+const Name = styled.span`
+  font-size: 13px;
+  font-weight 500;
+`;
 
-const Date = styled.span``;
+const Date = styled.span`
+  font-size: 12px;
+  font-weight: 400;
+`;
 
 const Text = styled.span``;
 
@@ -31,7 +37,7 @@ const Comment = () => {
       <Avatar src="https://images.pexels.com/photos/2071881/pexels-photo-2071881.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
       <Details>
         <Name>
-          J<Date>1 Day Ago</Date>
+          J1<Date>1 Day Ago</Date>
         </Name>
         <Text>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
