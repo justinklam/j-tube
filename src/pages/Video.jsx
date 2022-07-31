@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 // Components
 import Comments from "../components/Comments";
+import Card from "../components/Card";
 
 // MUI
 import {
@@ -159,7 +160,13 @@ const Video = () => {
         <Hr />
         <Comments />
       </Content>
-      <Recommendation>Recommendation</Recommendation>
+      <Recommendation>
+        <Card type="sm" />
+        <Card type="sm" />
+        <Card type="sm" />
+        <Card type="sm" />
+        <Card type="sm" />
+      </Recommendation>
     </Container>
   );
 };
