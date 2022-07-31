@@ -2,10 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
+// if props.type is small, make it display: flex
 const Container = styled.div`
   width: 360px;
-  margin-bottom: 45px;
+  margin-bottom: ${(props) => (props.type === "sm" ? "10px" : "45px")};
   cursor: pointer;
+  display: ${(props) => props.type === "sm" && "flex"};
 `;
 
 const Image = styled.img`
