@@ -16,12 +16,28 @@ const Avatar = styled.img`
 const Details = styled.div`
   display: flex;
   flex-direction: column;
+  gap: 10px;
 `;
+
+const Name = styled.span``;
+
+const Date = styled.span``;
+
+const Text = styled.span``;
 
 const Comment = () => {
   return (
     <Container>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      <Avatar src="https://images.pexels.com/photos/2071881/pexels-photo-2071881.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+      <Details>
+        <Name>
+          J<Date>1 Day Ago</Date>
+        </Name>
+        <Text>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod
+        </Text>
+      </Details>
     </Container>
   );
 };
