@@ -22,7 +22,8 @@ const Details = styled.div`
   display: flex;
   margin-top: ${(props) => props.type !== "sm" && "16px"};
   gap: 12px;
-  flex: 1;
+  flex: 2;
+  margin-left: 10px;
 `;
 
 const ChannelImage = styled.img`
