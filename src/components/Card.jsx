@@ -12,8 +12,9 @@ const Container = styled.div`
 
 const Image = styled.img`
   width: 100%;
-  height: ${(props) => (props.type === "sm" ? "100px" : "200px")};
+  height: ${(props) => (props.type === "sm" ? "120px" : "200px")};
   background-color: #999;
+  gap: 10px;
 `;
 
 const Details = styled.div`
