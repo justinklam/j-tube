@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 // if props.type is small, make it display: flex
 const Container = styled.div`
-  width: 360px;
+  width: ${(props) => props.type !== "sm" && "360px"};
   margin-bottom: ${(props) => (props.type === "sm" ? "10px" : "45px")};
   cursor: pointer;
   display: ${(props) => props.type === "sm" && "flex"};
@@ -19,7 +19,7 @@ const Image = styled.img`
 
 const Details = styled.div`
   display: flex;
-  margin-top: 16px;
+  margin-top: ${(props) => props.type !== "sm" && "16px"};
   gap: 12px;
 `;
 
