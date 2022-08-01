@@ -24,6 +24,7 @@ const Details = styled.div`
   gap: 12px;
   flex: 2;
   margin-left: 10px;
+  color: ${({ theme }) => theme.text};
 `;
 
 const ChannelImage = styled.img`
