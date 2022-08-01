@@ -12,7 +12,7 @@ const Container = styled.div`
 
 const Image = styled.img`
   width: 100%;
-  height: 202px;
+  height: ${(props) => (props.type === "sm" ? "100px" : "200px")};
   background-color: #999;
 `;
 
@@ -48,8 +48,11 @@ const Card = ({ type }) => {
   return (
     <Link to="/video/test" style={{ textDecoration: "none" }}>
       <Container type={type}>
-        <Image src="https://i.ytimg.com/vi/IjMESxJdWkg/hq720_live.jpg?sqp=CKz--pYG-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAyQzog-iBzUmBVIP5l7wqAqErk4A" />
-        <Details>
+        <Image
+          type={type}
+          src="https://i.ytimg.com/vi/IjMESxJdWkg/hq720_live.jpg?sqp=CKz--pYG-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAyQzog-iBzUmBVIP5l7wqAqErk4A"
+        />
+        <Details type={type}>
           <ChannelImage src="https://images.pexels.com/photos/2071881/pexels-photo-2071881.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
           <Texts>
             <Title>Test</Title>
