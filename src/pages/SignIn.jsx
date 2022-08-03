@@ -29,6 +29,10 @@ const Button = styled.button``;
 
 const More = styled.div``;
 
+const Links = styled.div``;
+
+const Link = styled.span``;
+
 const SignIn = () => {
   return (
     <Container>
@@ -45,6 +49,14 @@ const SignIn = () => {
         <Input type="password" placeholder="password" />
         <Button>Sign Up</Button>
       </Wrapper>
+      <More>
+        English
+        <Links>
+          <Link>Help</Link>
+          <Link>Privacy</Link>
+          <Link>Terms</Link>
+        </Links>
+      </More>
     </Container>
   );
 };
