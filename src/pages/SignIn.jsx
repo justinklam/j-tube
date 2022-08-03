@@ -30,7 +30,7 @@ const SubTitle = styled.h2`
 `;
 
 const Input = styled.input`
-  border: none;
+  border: 1px solid ${({ theme }) => theme.soft};
   border-radius: 3px;
   padding; 10px;
   background-color: transparent;
@@ -50,14 +50,14 @@ const SignIn = () => {
       <Wrapper>
         <Title>Sign In</Title>
         <SubTitle>to continue to J-Tube</SubTitle>
-        <Input placeholder="username" />
-        <Input type="password" placeholder="password" />
+        <Input placeholder="Username" />
+        <Input type="password" placeholder="Password" />
         <Button>Sign In</Button>
 
         <Title>or</Title>
-        <Input placeholder="username" />
-        <Input type="email" placeholder="email" />
-        <Input type="password" placeholder="password" />
+        <Input placeholder="Username" />
+        <Input type="email" placeholder="Email" />
+        <Input type="password" placeholder="Password" />
         <Button>Sign Up</Button>
       </Wrapper>
       <More>
