@@ -4,6 +4,7 @@ import styled from "styled-components";
 const Container = styled.div`
   display: flex;
   align-items: center;
+  flex-direction: column;
   justify-content: center;
   height: calc(100vh - 56px);
   color: ${({ theme }) => theme.text};
@@ -19,11 +20,21 @@ const Wrapper = styled.div`
   gap: 10px;
 `;
 
-const Title = styled.h1``;
+const Title = styled.h1`
+  font-size: 24px;
+`;
 
-const SubTitle = styled.h2``;
+const SubTitle = styled.h2`
+  font-size: 20px;
+  font-weight: 300;
+`;
 
-const Input = styled.input``;
+const Input = styled.input`
+  border: none;
+  border-radius: 3px;
+  padding; 10px;
+  background-color: transparent;
+`;
 
 const Button = styled.button``;
 
