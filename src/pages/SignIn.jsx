@@ -32,11 +32,20 @@ const SubTitle = styled.h2`
 const Input = styled.input`
   border: 1px solid ${({ theme }) => theme.soft};
   border-radius: 3px;
-  padding; 10px;
+  padding: 10px;
   background-color: transparent;
+  width: 100%;
 `;
 
-const Button = styled.button``;
+const Button = styled.button`
+  border: none;
+  border-radius: 3px;
+  padding: 10px 20px;
+  font-weight: 500;
+  cursor: pointer;
+  background-color: ${({ theme }) => theme.soft};
+  color: ${({ theme }) => theme.textSoft}; ;
+`;
 
 const More = styled.div``;
 
