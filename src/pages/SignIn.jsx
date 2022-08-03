@@ -37,6 +37,13 @@ const SignIn = () => {
         <SubTitle>to continue to J-Tube</SubTitle>
         <Input placeholder="username" />
         <Input type="password" placeholder="password" />
+        <Button>Sign In</Button>
+
+        <Title>or</Title>
+        <Input placeholder="username" />
+        <Input type="email" placeholder="email" />
+        <Input type="password" placeholder="password" />
+        <Button>Sign Up</Button>
       </Wrapper>
     </Container>
   );
