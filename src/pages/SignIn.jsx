@@ -47,11 +47,20 @@ const Button = styled.button`
   color: ${({ theme }) => theme.textSoft}; ;
 `;
 
-const More = styled.div``;
+const More = styled.div`
+  display: flex;
+  margin-top: 10px;
+  font-size: 12px;
+  color: ${({ theme }) => theme.textSoft}; ;
+`;
 
-const Links = styled.div``;
+const Links = styled.div`
+  margin-left: 50px;
+`;
 
-const Link = styled.span``;
+const Link = styled.span`
+  margin-left: 30px;
+`;
 
 const SignIn = () => {
   return (
