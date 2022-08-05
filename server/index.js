@@ -5,6 +5,20 @@ import dotenv from "dotenv";
 const app = express();
 dotenv.config();
 
-app.listen(8080, () => {
-  console.log("Server connected! 🐅");
+const port = process.env.PORT || 8000;
+
+const connect = () => {
+  mongoose
+    .connect(process.env.MONGODB)
+    .then(() => {
+      console.log(`MongoDB connected! 🐯`);
+    })
+    .catch((error) => {
+      throw error;
+    });
+};
+
+app.listen(port, () => {
+  connect();
+  console.log(`Server connected at ${port}! 🐅`);
 });
