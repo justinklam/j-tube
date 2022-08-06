@@ -3,7 +3,9 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 
 // Route Imports
+import commentRoutes from "./routes/comments.js";
 import userRoutes from "./routes/users.js";
+import videoRoutes from "./routes/videos.js";
 
 const app = express();
 dotenv.config();
@@ -22,7 +24,9 @@ const connect = () => {
 };
 
 // Routes
+app.use("/api/comments", commentRoutes);
 app.use("/api/users", userRoutes);
+app.use("/api/video", videoRoutes);
 
 app.listen(port, () => {
   connect();
