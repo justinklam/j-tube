@@ -24,6 +24,7 @@ const connect = () => {
     });
 };
 
+// Middleware
 app.use(express.json());
 
 // Routes
