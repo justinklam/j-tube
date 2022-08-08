@@ -34,12 +34,15 @@ export const signin = async (req, res, next) => {
 
     // passing MongoDB id to create a hashtoken
     const token = jwt.sign({ id: user._id }, process.env.JWT);
+    // removes password from the user details being sent back
+    const { password, ...others } = user._doc;
+
     res
       .cookie("access_token", token, {
         httpOnly: true,
       })
       .status(200)
-      .json(user);
+      .json(others);
   } catch (err) {
     next(err);
   }
