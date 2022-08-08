@@ -34,6 +34,11 @@ export const signin = async (req, res, next) => {
 
     // passing MongoDB id to create a hashtoken
     const token = jwt.sign({ id: user._id }, process.env.JWT);
+    res
+      .cookie("access_token", token, {
+        httpOnly: true,
+      })
+      .status(200);
   } catch (err) {
     next(err);
   }
