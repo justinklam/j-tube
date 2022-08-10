@@ -8,9 +8,14 @@ export const update = async (req, res, next) => {
   // params id compare to jwt req.user.id
   if (req.params.id === req.user.id) {
     try {
-      const updatedUser = await User.findByIdAndUpdate(req.params.id, {
-        $set: res.body,
-      });
+      const updatedUser = await User.findByIdAndUpdate(
+        req.params.id,
+        {
+          $set: req.body,
+        },
+        // returns newest version of the user with updated info
+        { new: true }
+      );
       res.status(200).json(updatedUser);
     } catch (err) {
       next(err);
