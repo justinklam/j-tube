@@ -6,7 +6,7 @@ import jwt from "jsonwebtoken";
 import { createError } from "../error.js";
 
 // Model
-import User from "../models/User";
+import User from "../models/User.js";
 
 export const signup = async (req, res, next) => {
   try {
