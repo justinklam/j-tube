@@ -49,6 +49,11 @@ export const getUser = async (req, res, next) => {
 
 export const subscribe = async (req, res, next) => {
   try {
+    // locates user
+    await user.findById(req.user.id, {
+      // push other channel's user ids into the array
+      $push: { subscribedUsers: req.params.id },
+    });
   } catch (err) {
     next(err);
   }
