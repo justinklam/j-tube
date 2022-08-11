@@ -1,7 +1,36 @@
-export const addVideo = async (req, res, next) => {};
+// Models
+import User from "../models/User.js";
+import Video from "../models/Video.js";
 
-export const updateVideo = async (req, res, next) => {};
+// Helper Function
+import { createError } from "../error";
 
-export const deleteVideo = async (req, res, next) => {};
+export const addVideo = async (req, res, next) => {
+  const newVideo = new Video({ userId: req.user.id, ...req.body });
 
-export const getVideo = async (req, res, next) => {};
+  try {
+  } catch (err) {
+    next(err);
+  }
+};
+
+export const updateVideo = async (req, res, next) => {
+  try {
+  } catch (err) {
+    next(err);
+  }
+};
+
+export const deleteVideo = async (req, res, next) => {
+  try {
+  } catch (err) {
+    next(err);
+  }
+};
+
+export const getVideo = async (req, res, next) => {
+  try {
+  } catch (err) {
+    next(err);
+  }
+};

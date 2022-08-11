@@ -1,8 +1,8 @@
-// Helper function
-import { createError } from "../error.js";
-
 // Models
 import User from "../models/User.js";
+
+// Helper function
+import { createError } from "../error.js";
 
 export const update = async (req, res, next) => {
   // params id compare to jwt req.user.id
