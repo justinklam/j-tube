@@ -29,6 +29,8 @@ export const updateVideo = async (req, res, next) => {
         { new: true }
       );
       res.status(200).json(updatedVideo);
+    } else {
+      return next(createError(403, "You can only update your own videos!"));
     }
   } catch (err) {
     next(err);
