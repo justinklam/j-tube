@@ -75,8 +75,9 @@ export const addView = async (req, res, next) => {
 
 export const random = async (req, res, next) => {
   try {
-    const video = await Video.findById(req.params.id);
-    res.status(200).json(video);
+    // MongoDB query to aggregate and locate a sample of 40
+    const videos = await Video.aggregate([{ $sample: { size: 40 } }]);
+    res.status(200).json(videos);
   } catch (err) {
     next(err);
   }
