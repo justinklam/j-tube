@@ -30,7 +30,7 @@ export const updateVideo = async (req, res, next) => {
       );
       res.status(200).json(updatedVideo);
     } else {
-      return next(createError(403, "You can only update your own videos!"));
+      return next(createError(403, "You cannot update other user's videos!"));
     }
   } catch (err) {
     next(err);
@@ -39,6 +39,14 @@ export const updateVideo = async (req, res, next) => {
 
 export const deleteVideo = async (req, res, next) => {
   try {
+    const video = await Video.findById(req.params.id);
+    if (!video) return next(createError(404, "Video not found!"));
+    if (req.user.id === video.userId) {
+      const updatedVideo = await Video.findByIdAndDelete(req.params.id);
+      res.status(200).json("The video has been successfully deleted!");
+    } else {
+      return next(createError(403, "You cannot delete other user's videos!"));
+    }
   } catch (err) {
     next(err);
   }
