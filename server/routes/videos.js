@@ -1,8 +1,12 @@
 import express from "express";
 import {
   addVideo,
+  addView,
   deleteVideo,
   getVideo,
+  random,
+  subscribe,
+  trend,
   updateVideo,
 } from "../controllers/video.js";
 
@@ -20,12 +24,12 @@ router.delete("/:id", verifyToken, deleteVideo);
 
 router.get("/find/:id", getVideo);
 
-router.put("/view/:id", getVideo);
+router.put("/view/:id", addView);
 
-router.get("/trend", getVideo);
+router.get("/trend", trend);
 
-router.get("/random", getVideo);
+router.get("/random", random);
 
-router.get("/subscribe", getVideo);
+router.get("/subscribe", subscribe);
 
 export default router;
