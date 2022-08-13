@@ -99,7 +99,7 @@ export const subscribe = async (req, res, next) => {
     const subscribedChannels = user.subscribedUsers;
 
     // promise is used to locate all the channels
-    const list = Promise.all(
+    const list = await Promise.all(
       subscribedChannels.map((channelId) => {
         // return if userId is equal to channelId
         return Video.find({ userId: channelId });
