@@ -50,7 +50,7 @@ export const getUser = async (req, res, next) => {
 export const subscribe = async (req, res, next) => {
   try {
     // locates user
-    await User.findById(req.user.id, {
+    await User.findByIdAndUpdate(req.user.id, {
       // push other channel's user ids into the array
       $push: { subscribedUsers: req.params.id },
     });
@@ -65,7 +65,7 @@ export const subscribe = async (req, res, next) => {
 
 export const unsubscribe = async (req, res, next) => {
   try {
-    await User.findById(req.user.id, {
+    await User.findByIdAndUpdate(req.user.id, {
       // delete userId from the subscribedUsers array
       $pull: { subscribedUsers: req.params.id },
     });
