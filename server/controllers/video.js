@@ -111,3 +111,21 @@ export const subscribe = async (req, res, next) => {
     next(err);
   }
 };
+
+export const getByTag = async (req, res, next) => {
+  try {
+    const videos = await Video.find.sort({ views: -1 });
+    res.status(200).json(videos);
+  } catch (err) {
+    next(err);
+  }
+};
+
+export const search = async (req, res, next) => {
+  try {
+    const videos = await Video.find.sort({ views: -1 });
+    res.status(200).json(videos);
+  } catch (err) {
+    next(err);
+  }
+};
