@@ -44,7 +44,7 @@ app.use((err, req, res, next) => {
 app.use("/api/auth", authRoutes);
 app.use("/api/comments", commentRoutes);
 app.use("/api/users", userRoutes);
-app.use("/api/video", videoRoutes);
+app.use("/api/videos", videoRoutes);
 
 app.listen(port, () => {
   connect();
