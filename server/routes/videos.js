@@ -30,6 +30,6 @@ router.get("/trend", trend);
 
 router.get("/random", random);
 
-router.get("/subscribe", subscribe);
+router.get("/subscribe", verifyToken, subscribe);
 
 export default router;
