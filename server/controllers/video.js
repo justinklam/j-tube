@@ -95,8 +95,18 @@ export const trend = async (req, res, next) => {
 
 export const subscribe = async (req, res, next) => {
   try {
-    const video = await Video.findById(req.params.id);
-    res.status(200).json(video);
+    const user = await User.findById(req.user.id);
+    const subscribedChannels = user.subscribedUsers;
+
+    // promise is used to locate all the channels
+    const list = Promise.all(
+      subscribedChannels.map((channelId) => {
+        // return if userId is equal to channelId
+        return Video.find({ userId: channelId });
+      })
+    );
+
+    res.status(200).json(list);
   } catch (err) {
     next(err);
   }
