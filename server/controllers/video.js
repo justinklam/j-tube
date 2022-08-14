@@ -113,6 +113,10 @@ export const subscribe = async (req, res, next) => {
 };
 
 export const getByTag = async (req, res, next) => {
+  // query targets addressbar info
+  // ie. api/videos/tags?tags=js,py,c
+  const tags = req.query.tags.split(",");
+
   try {
     const videos = await Video.find.sort({ views: -1 });
     res.status(200).json(videos);
