@@ -2,6 +2,9 @@
 import Video from "../models/Video.js";
 import Comment from "../models/Comment.js";
 
+// Helper functions
+import { createError } from "../error";
+
 export const addComment = async (req, res, next) => {
   const newComment = new Comment({ ...req.body, userId: req.user.id });
   try {
@@ -19,6 +22,9 @@ export const deleteComment = async (req, res, next) => {
 
     if (req.user.id === comment.userId || req.user.id === video.userId) {
       await Comment.findByIdAndDelete(req.params.id);
+      res.status(200).json("The comment has been deleted!");
+    } else {
+      return next(createError(403, "You cannot delete other user's comments!"));
     }
   } catch (err) {
     next(err);
