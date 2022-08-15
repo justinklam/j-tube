@@ -1,3 +1,7 @@
+// Models
+import Video from "../models/Video.js";
+import Comment from "../models/Comment.js";
+
 export const addComment = async (req, res, next) => {
   const newComment = new Comment({ ...req.body, userId: req.user.id });
   try {
@@ -10,6 +14,8 @@ export const addComment = async (req, res, next) => {
 
 export const deleteComment = async (req, res, next) => {
   try {
+    const comment = await Comment.findById(res.params.id);
+    const video = await Video.findById(res.params.id);
   } catch (err) {
     next(err);
   }
