@@ -16,6 +16,10 @@ export const deleteComment = async (req, res, next) => {
   try {
     const comment = await Comment.findById(res.params.id);
     const video = await Video.findById(res.params.id);
+
+    if (req.user.id === comment.userId || req.user.id === video.userId) {
+      await Comment.findByIdAndDelete(req.params.id);
+    }
   } catch (err) {
     next(err);
   }
