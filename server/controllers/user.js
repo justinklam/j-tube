@@ -3,6 +3,7 @@ import User from "../models/User.js";
 
 // Helper function
 import { createError } from "../error.js";
+import Video from "../models/Video.js";
 
 export const update = async (req, res, next) => {
   // params id compare to jwt req.user.id
@@ -79,7 +80,13 @@ export const unsubscribe = async (req, res, next) => {
 };
 
 export const like = async (req, res, next) => {
+  const id = req.user.id;
+  const videoId = req.user.videoId;
   try {
+    await Video.findByIdAndUpdate(videoId, {
+      // ensures id is in array only once, so it won't repeatedly add to same id
+      $addToSet: { likes: id },
+    });
   } catch (err) {
     next(err);
   }
