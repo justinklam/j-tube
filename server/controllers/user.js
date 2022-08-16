@@ -84,7 +84,7 @@ export const like = async (req, res, next) => {
   const videoId = req.params.videoId;
   try {
     await Video.findByIdAndUpdate(videoId, {
-      // ensures id is in array only once, so it won't repeatedly add to same id
+      // addToSet ensures id is in array only once, so it won't repeatedly add to same id if it's liked again
       $addToSet: { likes: id },
       $pull: { dislikes: id },
     });
@@ -99,6 +99,7 @@ export const dislike = async (req, res, next) => {
   const videoId = req.params.videoId;
   try {
     await Video.findByIdAndUpdate(videoId, {
+      // addToSet ensures id is in array only once, so it won't repeatedly add to same id if it's disliked again
       $addToSet: { dislikes: id },
       $pull: { likes: id },
     });
