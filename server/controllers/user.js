@@ -81,7 +81,7 @@ export const unsubscribe = async (req, res, next) => {
 
 export const like = async (req, res, next) => {
   const id = req.user.id;
-  const videoId = req.user.videoId;
+  const videoId = req.params.videoId;
   try {
     await Video.findByIdAndUpdate(videoId, {
       // ensures id is in array only once, so it won't repeatedly add to same id
@@ -95,6 +95,8 @@ export const like = async (req, res, next) => {
 };
 
 export const dislike = async (req, res, next) => {
+  const id = req.user.id;
+  const videoId = req.params.videoId;
   try {
   } catch (err) {
     next(err);
