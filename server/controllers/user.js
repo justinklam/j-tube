@@ -86,7 +86,9 @@ export const like = async (req, res, next) => {
     await Video.findByIdAndUpdate(videoId, {
       // ensures id is in array only once, so it won't repeatedly add to same id
       $addToSet: { likes: id },
+      $pull: { dislikes: id },
     });
+    res.status(200).json("The video has been liked!");
   } catch (err) {
     next(err);
   }
