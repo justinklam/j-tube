@@ -15,9 +15,9 @@ const Home = () => {
   const [video, setVideos] = useState([]);
 
   useEffect(() => {
-    const fetchVideos = (async = () => {
-      const res = axios.get("/videos/random");
-    });
+    const fetchVideos = async () => {
+      const res = await axios.get("/videos/random");
+    };
   }, []);
 
   return (
