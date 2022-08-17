@@ -12,7 +12,7 @@ const Container = styled.div`
 `;
 
 const Home = () => {
-  const [video, setVideos] = useState([]);
+  const [videos, setVideos] = useState([]);
 
   useEffect(() => {
     const fetchVideos = async () => {
@@ -25,7 +25,9 @@ const Home = () => {
 
   return (
     <Container>
-      <Card />
+      {videos.map((video) => (
+        <Card />
+      ))}
     </Container>
   );
 };
