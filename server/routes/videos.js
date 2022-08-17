@@ -7,7 +7,7 @@ import {
   getVideo,
   random,
   search,
-  subscribe,
+  sub,
   trend,
   updateVideo,
 } from "../controllers/video.js";
@@ -39,7 +39,7 @@ router.get("/trend", trend);
 router.get("/random", random);
 
 // subscribe to a video
-router.get("/subscribe", verifyToken, subscribe);
+router.get("/sub", verifyToken, sub);
 
 // get videos by tags
 router.get("/tags", getByTag);

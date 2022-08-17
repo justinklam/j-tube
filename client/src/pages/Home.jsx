@@ -12,7 +12,7 @@ const Container = styled.div`
   margin-right: 20px;
 `;
 
-const Home = () => {
+const Home = ({ type }) => {
   const [videos, setVideos] = useState([]);
 
   useEffect(() => {
