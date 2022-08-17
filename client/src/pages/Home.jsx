@@ -17,29 +17,14 @@ const Home = () => {
   useEffect(() => {
     const fetchVideos = async () => {
       const res = await axios.get("/videos/random");
+      setVideos(res.data);
     };
+    // function called outside useEffect as useEffect cannot be async
+    fetchVideos();
   }, []);
 
   return (
     <Container>
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
       <Card />
     </Container>
   );
