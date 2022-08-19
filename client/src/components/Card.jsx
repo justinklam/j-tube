@@ -74,11 +74,12 @@ const Card = ({ type, video }) => {
         <Details type={type}>
           <ChannelImage
             type={type}
-            src="https://images.pexels.com/photos/2071881/pexels-photo-2071881.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            src={channel.img}
+            // src="https://images.pexels.com/photos/2071881/pexels-photo-2071881.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
           />
           <Texts>
             <Title>{video.title}</Title>
-            <ChannelName>J Dev</ChannelName>
+            <ChannelName>{channel.name}</ChannelName>
             <Info>
               {video.views} views • {format(video.createdAt)}
             </Info>
