@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { format } from "timeago.js";
 
 // if props.type is small, make it display: flex
 const Container = styled.div`
@@ -66,7 +67,9 @@ const Card = ({ type, video }) => {
           <Texts>
             <Title>{video.title}</Title>
             <ChannelName>J Dev</ChannelName>
-            <Info>{video.views} views • 1 day ago</Info>
+            <Info>
+              {video.views} views • {format(video.createdAt)}
+            </Info>
           </Texts>
         </Details>
       </Container>
