@@ -68,6 +68,10 @@ const SignIn = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  const handleLogin = async (e) => {
+    e.preventDefault();
+  };
+
   return (
     <Container>
       <Wrapper>
@@ -82,7 +86,7 @@ const SignIn = () => {
           placeholder="Password"
           onChange={(e) => setPassword(e.target.value)}
         />
-        <Button>Sign In</Button>
+        <Button onClick={handleLogin}>Sign In</Button>
 
         <Title>or</Title>
         <Input
