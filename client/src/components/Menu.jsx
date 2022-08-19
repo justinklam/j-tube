@@ -103,10 +103,12 @@ const Menu = ({ darkMode, setDarkMode }) => {
           <HomeIcon />
           Home
         </Item>
-        <Item>
-          <ExploreOutlinedIcon />
-          Explore
-        </Item>
+        <Link to="trends" style={{ textDecoration: "none" }}>
+          <Item>
+            <ExploreOutlinedIcon />
+            Explore
+          </Item>
+        </Link>
         <Item>
           <SubscriptionsOutlinedIcon />
           Subscriptions
