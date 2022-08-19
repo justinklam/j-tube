@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import axios from "axios";
 import { format } from "timeago.js";
 
 // if props.type is small, make it display: flex
@@ -55,6 +56,8 @@ color: ${({ theme }) => theme.textSoft};
 `;
 
 const Card = ({ type, video }) => {
+  const [channel, setChannel] = useState({});
+
   return (
     <Link to="/video/test" style={{ textDecoration: "none" }}>
       <Container type={type}>
