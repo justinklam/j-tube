@@ -73,14 +73,32 @@ const SignIn = () => {
       <Wrapper>
         <Title>Sign In</Title>
         <SubTitle>to continue to J-Tube</SubTitle>
-        <Input placeholder="Username" />
-        <Input type="password" placeholder="Password" />
+        <Input
+          placeholder="Username"
+          onChange={(e) => setName(e.target.value)}
+        />
+        <Input
+          type="password"
+          placeholder="Password"
+          onChange={(e) => setPassword(e.target.value)}
+        />
         <Button>Sign In</Button>
 
         <Title>or</Title>
-        <Input placeholder="Username" />
-        <Input type="email" placeholder="Email" />
-        <Input type="password" placeholder="Password" />
+        <Input
+          placeholder="Username"
+          onChange={(e) => setName(e.target.value)}
+        />
+        <Input
+          type="email"
+          placeholder="Email"
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        <Input
+          type="password"
+          placeholder="Password"
+          onChange={(e) => setPassword(e.target.value)}
+        />
         <Button>Sign Up</Button>
       </Wrapper>
       <More>
