@@ -1,3 +1,4 @@
+import axios from "axios";
 import React, { useState } from "react";
 import styled from "styled-components";
 
@@ -70,6 +71,10 @@ const SignIn = () => {
 
   const handleLogin = async (e) => {
     e.preventDefault();
+    try {
+      const res = await axios.post("/auth/signin", { name, password });
+      console.log(res.data);
+    } catch (err) {}
   };
 
   return (
@@ -77,6 +82,7 @@ const SignIn = () => {
       <Wrapper>
         <Title>Sign In</Title>
         <SubTitle>to continue to J-Tube</SubTitle>
+
         <Input
           placeholder="Username"
           onChange={(e) => setName(e.target.value)}
@@ -86,7 +92,7 @@ const SignIn = () => {
           placeholder="Password"
           onChange={(e) => setPassword(e.target.value)}
         />
-        <Button onClick={handleLogin}>Sign In</Button>
+        <Button onClick={handleLogin}>Sign in</Button>
 
         <Title>or</Title>
         <Input
@@ -105,6 +111,7 @@ const SignIn = () => {
         />
         <Button>Sign Up</Button>
       </Wrapper>
+
       <More>
         English
         <Links>
