@@ -11,5 +11,9 @@ const initialState = {
 export const userSlice = createSlice({
   name: "user",
   initialState,
-  reducers: {},
+  reducers: {
+    loginStart: (state) => {
+      state.loading = true;
+    },
+  },
 });
