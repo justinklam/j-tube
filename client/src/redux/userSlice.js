@@ -7,3 +7,9 @@ const initialState = {
   loading: false,
   error: false,
 };
+
+export const userSlice = createSlice({
+  name: "user",
+  initialState,
+  reducers: {},
+});
