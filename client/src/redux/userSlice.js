@@ -15,5 +15,15 @@ export const userSlice = createSlice({
     loginStart: (state) => {
       state.loading = true;
     },
+    // if user is found, this is run
+    loginSuccess: (state, action) => {
+      state.loading = true;
+      state.user = action.payload;
+    },
+    // else if no user, loginFailure is run
+    loginFailure: (state) => {
+      state.loading = false;
+      state.error = true;
+    },
   },
 });
