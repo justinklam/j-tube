@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  user: null,
+  currentUser: null,
   // when we click the login button, loading = true
   // if successful or error, it will be false again
   loading: false,
@@ -18,7 +18,7 @@ export const userSlice = createSlice({
     // if user is found, this is run
     loginSuccess: (state, action) => {
       state.loading = true;
-      state.user = action.payload;
+      state.currentUser = action.payload;
     },
     // else if no user, loginFailure is run
     loginFailure: (state) => {
@@ -26,7 +26,7 @@ export const userSlice = createSlice({
       state.error = true;
     },
     logout: (state) => {
-      state.user = null;
+      state.currentUser = null;
       state.loading = false;
       state.error = false;
     },

@@ -6,3 +6,8 @@ export default configureStore({
     user: userReducer,
   },
 });
+
+// To use Access Points
+// storage
+// user
+// currentUser, loading, error
