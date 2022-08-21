@@ -74,7 +74,6 @@ const SignIn = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  // React Redux Hook - useDispatch
   const dispatch = useDispatch();
 
   const handleLogin = async (e) => {
