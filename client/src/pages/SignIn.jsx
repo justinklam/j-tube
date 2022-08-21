@@ -48,7 +48,11 @@ const Button = styled.button`
   font-weight: 500;
   cursor: pointer;
   background-color: ${({ theme }) => theme.soft};
-  color: ${({ theme }) => theme.textSoft}; ;
+  color: ${({ theme }) => theme.textSoft};
+
+  &:hover {
+    background-color: ${({ theme }) => theme.bg};
+  }
 `;
 
 const More = styled.div`
