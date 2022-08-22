@@ -67,12 +67,16 @@ const Navbar = () => {
           <Input placeholder="Search" />
           <SearchOutlinedIcon />
         </Search>
-        <Link to="signin" style={{ textDecoration: "none" }}>
-          <Button>
-            <AccountCircleOutlinedIcon />
-            SIGN IN
-          </Button>
-        </Link>
+        {currentUser ? (
+          "user"
+        ) : (
+          <Link to="signin" style={{ textDecoration: "none" }}>
+            <Button>
+              <AccountCircleOutlinedIcon />
+              SIGN IN
+            </Button>
+          </Link>
+        )}
       </Wrapper>
     </Container>
   );
