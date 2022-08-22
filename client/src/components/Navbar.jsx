@@ -6,6 +6,7 @@ import { useSelector } from "react-redux";
 // MUI
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
+import VideoCallIcon from "@mui/icons-material/VideoCall";
 import { Avatar } from "@mui/material";
 
 const Container = styled.div`
@@ -71,7 +72,7 @@ const Navbar = () => {
         {/* if currentUser exists, display name else display signin button */}
         {currentUser ? (
           <User>
-            <VideoCallOutLinedIcon />
+            <VideoCallIcon />
             <Avatar />
             {currentUser.name}
           </User>
