@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 // MUI
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
@@ -56,6 +57,9 @@ const Button = styled.button`
 `;
 
 const Navbar = () => {
+  // Hook from Redux
+  const { currentUser } = useSelector((state) => state.user);
+
   return (
     <Container>
       <Wrapper>
