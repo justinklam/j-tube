@@ -65,6 +65,13 @@ const User = styled.div`
   color: ${({ theme }) => theme.text};
 `;
 
+const Avatar = styled.img`
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  background-color #999;
+`;
+
 const Navbar = () => {
   // Hook from Redux
   const { currentUser } = useSelector((state) => state.user);
