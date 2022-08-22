@@ -6,6 +6,7 @@ import { useSelector } from "react-redux";
 // MUI
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
+import { Avatar } from "@mui/material";
 
 const Container = styled.div`
   position: sticky;
@@ -67,8 +68,13 @@ const Navbar = () => {
           <Input placeholder="Search" />
           <SearchOutlinedIcon />
         </Search>
+        {/* if currentUser exists, display name else display signin button */}
         {currentUser ? (
-          "user"
+          <User>
+            <VideoCallOutLinedIcon />
+            <Avatar />
+            {currentUser.name}
+          </User>
         ) : (
           <Link to="signin" style={{ textDecoration: "none" }}>
             <Button>
