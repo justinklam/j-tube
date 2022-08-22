@@ -58,6 +58,14 @@ const Button = styled.button`
   gap: 5px;
 `;
 
+const User = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+  color: ${({ theme }) => theme.text};
+`;
+
 const Navbar = () => {
   // Hook from Redux
   const { currentUser } = useSelector((state) => state.user);
