@@ -2,7 +2,7 @@ import { configureStore, combineReducers } from "@reduxjs/toolkit";
 import userReducer from "./userSlice";
 import videoReducer from "./videoSlice";
 
-// Persist
+// Redux-Persist
 import {
   persistStore,
   persistReducer,
@@ -22,11 +22,12 @@ const persistConfig = {
   storage,
 };
 
+const rootReducer = combineReducers({ user: userReducer, video: videoReducer });
+
+const persistedReducer = persistReducer(persistConfig, rootReducer);
+
 export default configureStore({
-  reducer: {
-    user: userReducer,
-    video: videoReducer,
-  },
+  reducer: persistedReducer,
 });
 
 // To use Access Points
