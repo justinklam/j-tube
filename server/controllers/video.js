@@ -86,7 +86,7 @@ export const random = async (req, res, next) => {
 export const trend = async (req, res, next) => {
   try {
     // sort to locate the most viewed videos
-    const videos = await Video.find.sort({ views: -1 });
+    const videos = await Video.find().sort({ views: -1 });
     res.status(200).json(videos);
   } catch (err) {
     next(err);
