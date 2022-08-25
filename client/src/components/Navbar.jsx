@@ -1,7 +1,7 @@
 import React from "react";
-import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
+import styled from "styled-components";
 
 // MUI
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";

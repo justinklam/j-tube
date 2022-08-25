@@ -1,10 +1,12 @@
-import axios from "axios";
 import React, { useState } from "react";
+import styled from "styled-components";
+import axios from "axios";
+// React Redux
 import { useDispatch } from "react-redux";
 import { loginFailure, loginStart, loginSuccess } from "../redux/userSlice";
-import styled from "styled-components";
-// import { auth, provider } from "../firebase";
-// import { signInWithPopup } from "firebase/auth";
+// Firebase Auth
+import { auth, provider } from "../firebase";
+import { signInWithPopup } from "firebase/auth";
 
 const Container = styled.div`
   display: flex;
@@ -90,6 +92,10 @@ const SignIn = () => {
     }
   };
 
+  const signInWithGoogle = () => {
+    signInWithPopup(auth);
+  };
+
   return (
     <Container>
       <Wrapper>
@@ -108,7 +114,7 @@ const SignIn = () => {
 
         <Button onClick={handleLogin}>Sign in</Button>
         <Title>or</Title>
-        <Button>Sign in with Google</Button>
+        <Button onClick={signInWithGoogle}>Sign in with Google</Button>
 
         <Input
           placeholder="Username"
