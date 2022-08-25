@@ -93,7 +93,13 @@ const SignIn = () => {
   };
 
   const signInWithGoogle = () => {
-    signInWithPopup(auth);
+    signInWithPopup(auth, provider)
+      .then((result) => {
+        console.log(result);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   return (
