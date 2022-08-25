@@ -92,10 +92,14 @@ const SignIn = () => {
     }
   };
 
-  const signInWithGoogle = () => {
+  const signInWithGoogle = async () => {
     signInWithPopup(auth, provider)
       .then((result) => {
-        console.log(result);
+        axios.post("/auth/google", {
+          name: result.user.displayName,
+          email: result.user.email,
+          img: result.user.photoURL,
+        });
       })
       .catch((error) => {
         console.log(error);
