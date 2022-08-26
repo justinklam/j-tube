@@ -75,5 +75,7 @@ export const googleAuth = async (req, res, next) => {
         .status(200)
         .json(savedUser._doc);
     }
-  } catch (error) {}
+  } catch (err) {
+    next(err);
+  }
 };
