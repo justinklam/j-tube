@@ -60,6 +60,11 @@ export const googleAuth = async (req, res, next) => {
         })
         .status(200)
         .json(user._doc);
+    } else {
+      const newUser = new User({
+        ...req.body,
+        fromGoogle: true,
+      });
     }
   } catch (error) {}
 };
