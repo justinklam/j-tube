@@ -53,6 +53,13 @@ export const googleAuth = async (req, res, next) => {
     const user = User.findOne({ email: req.body.email });
     if (user) {
       const token = jwt.sign({ id: user._id }, process.env.JWT);
+
+      res
+        .cookie("access_token", token, {
+          httpOnly: true,
+        })
+        .status(200)
+        .json(user._doc);
     }
   } catch (error) {}
 };
