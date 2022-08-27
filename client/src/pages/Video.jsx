@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { useLocation } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 
 // Components
@@ -116,6 +117,8 @@ const Subscribe = styled.button`
 const Video = () => {
   const { currentUser } = useSelector((state) => state.user);
   const dispatch = useDispatch();
+
+  const path = useLocation();
 
   return (
     <Container>
