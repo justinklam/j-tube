@@ -118,7 +118,8 @@ const Video = () => {
   const { currentUser } = useSelector((state) => state.user);
   const dispatch = useDispatch();
 
-  const path = useLocation();
+  // split, add / and take index 2
+  const path = useLocation().pathname.split("/")[2];
 
   return (
     <Container>
@@ -167,13 +168,13 @@ const Video = () => {
         <Hr />
         <Comments />
       </Content>
-      <Recommendation>
+      {/* <Recommendation>
         <Card type="sm" />
         <Card type="sm" />
         <Card type="sm" />
         <Card type="sm" />
         <Card type="sm" />
-      </Recommendation>
+      </Recommendation> */}
     </Container>
   );
 };
