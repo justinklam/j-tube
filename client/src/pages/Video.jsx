@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { useLocation } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
@@ -14,6 +14,7 @@ import {
   ThumbDownOffAltOutlined,
   ThumbUpAltOutlined,
 } from "@mui/icons-material";
+import { useEffect } from "react";
 
 const Container = styled.div`
   display: flex;
@@ -120,6 +121,11 @@ const Video = () => {
 
   // split, add / and take index 2
   const path = useLocation().pathname.split("/")[2];
+
+  const [video, setVideo] = useState({});
+  const [channel, setChannel] = useState({});
+
+  useEffect(() => {}, []);
 
   return (
     <Container>
