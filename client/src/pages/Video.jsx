@@ -15,6 +15,7 @@ import {
   ThumbUpAltOutlined,
 } from "@mui/icons-material";
 import { useEffect } from "react";
+import axios from "axios";
 
 const Container = styled.div`
   display: flex;
@@ -125,7 +126,13 @@ const Video = () => {
   const [video, setVideo] = useState({});
   const [channel, setChannel] = useState({});
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const videoRes = await axios.get(`/videos/find${path}`);
+      } catch (err) {}
+    };
+  }, []);
 
   return (
     <Container>
