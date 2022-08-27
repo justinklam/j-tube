@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { useDispatch, useSelector } from "react-redux";
 
 // Components
 import Comments from "../components/Comments";
@@ -113,6 +114,9 @@ const Subscribe = styled.button`
 `;
 
 const Video = () => {
+  const { currentUser } = useSelector((state) => state.user);
+  const dispatch = useDispatch();
+
   return (
     <Container>
       <Content>
