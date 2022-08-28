@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import axios from "axios";
+import { format } from "timeago.js";
 import { useLocation } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { format } from "timeago.js";
+import { fetchSuccess } from "../redux/videoSlice";
 
 // Components
 import Comments from "../components/Comments";
@@ -160,7 +161,7 @@ const Video = () => {
           </Info>
           <Buttons>
             <Button>
-              <ThumbUpAltOutlined /> 123
+              <ThumbUpAltOutlined /> {currentVideo.likes?.length}
             </Button>
             <Button>
               <ThumbDownOffAltOutlined /> Dislike
@@ -176,11 +177,12 @@ const Video = () => {
         <Hr />
         <Channel>
           <ChannelInfo>
-            <Image src="https://yt3.ggpht.com/KNYElmLFGAOSZoBmxYGKKXhGHrT2e7Hmz3WsBerbam5uaDXFADAmT7htj3OcC-uK1O88lC9fQg=s88-c-k-c0x00ffffff-no-rj" />
+            <Image src={channel.img}></Image>
+            {/* <Image src="https://yt3.ggpht.com/KNYElmLFGAOSZoBmxYGKKXhGHrT2e7Hmz3WsBerbam5uaDXFADAmT7htj3OcC-uK1O88lC9fQg=s88-c-k-c0x00ffffff-no-rj" /> */}
             <ChannelDetails>
-              <ChannelName>J-Tube</ChannelName>
-              <ChannelCounter>300k subscribers</ChannelCounter>
-              <Description>This is the description</Description>
+              <ChannelName>{channel.name}</ChannelName>
+              <ChannelCounter>{channel.subscriber} subscribers</ChannelCounter>
+              <Description>{currentVideo.description}</Description>
             </ChannelDetails>
           </ChannelInfo>
           <Subscribe>Subscribe</Subscribe>
