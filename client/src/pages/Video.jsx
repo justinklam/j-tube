@@ -118,6 +118,8 @@ const Subscribe = styled.button`
 
 const Video = () => {
   const { currentUser } = useSelector((state) => state.user);
+  const { currentVideo } = useSelector((state) => state.video);
+
   const dispatch = useDispatch();
 
   // split, add / and take index 2
@@ -130,12 +132,12 @@ const Video = () => {
       try {
         const videoRes = await axios.get(`/videos/find${path}`);
         const channelRes = await axios.get(`/users/find${videoRes.userId}`);
-
         setChannel(channelRes.data);
+        dispatch(fetchSuccess(videoRes.data));
       } catch (err) {}
     };
     fetchData();
-  }, [path]);
+  }, [path, dispatch]);
 
   return (
     <Container>
