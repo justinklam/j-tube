@@ -123,7 +123,6 @@ const Video = () => {
   // split, add / and take index 2
   const path = useLocation().pathname.split("/")[2];
 
-  const [video, setVideo] = useState({});
   const [channel, setChannel] = useState({});
 
   useEffect(() => {
@@ -132,7 +131,6 @@ const Video = () => {
         const videoRes = await axios.get(`/videos/find${path}`);
         const channelRes = await axios.get(`/users/find${videoRes.userId}`);
 
-        setVideo(videoRes.data);
         setChannel(channelRes.data);
       } catch (err) {}
     };
