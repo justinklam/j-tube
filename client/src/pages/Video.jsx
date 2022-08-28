@@ -136,7 +136,8 @@ const Video = () => {
         setChannel(channelRes.data);
       } catch (err) {}
     };
-  }, []);
+    fetchData();
+  }, [path]);
 
   return (
     <Container>
