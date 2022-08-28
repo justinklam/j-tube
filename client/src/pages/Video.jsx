@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
+import axios from "axios";
 import { useLocation } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
+import { format } from "timeago.js";
 
 // Components
 import Comments from "../components/Comments";
@@ -14,8 +16,6 @@ import {
   ThumbDownOffAltOutlined,
   ThumbUpAltOutlined,
 } from "@mui/icons-material";
-import { useEffect } from "react";
-import axios from "axios";
 
 const Container = styled.div`
   display: flex;
@@ -153,9 +153,11 @@ const Video = () => {
             allowfullscreen
           ></iframe>
         </VideoWrapper>
-        <Title>Title</Title>
+        <Title>{currentVideo.title}</Title>
         <Details>
-          <Info>100,000 views • Jul 07, 2022</Info>
+          <Info>
+            {currentVideo.views} views • {format(currentVideo.createdAt)}
+          </Info>
           <Buttons>
             <Button>
               <ThumbUpAltOutlined /> 123
