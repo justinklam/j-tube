@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import axios from "axios";
 import { format } from "timeago.js";
-import { useLocation } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchSuccess } from "../redux/videoSlice";
+import { fetchFailure, fetchStart, fetchSuccess } from "../redux/videoSlice";
+import { useLocation } from "react-router-dom";
 
 // Components
 import Comments from "../components/Comments";
@@ -137,12 +137,18 @@ const Video = () => {
         );
         console.log("videoRes", videoRes);
         console.log("channelRes", channelRes);
+        // console.log("currentVideo", currentVideo);
+        // console.log("currentVideo.title", currentVideo.title);
         setChannel(channelRes.data);
         dispatch(fetchSuccess(videoRes.data));
-      } catch (err) {}
+      } catch (err) {
+        dispatch(fetchFailure());
+      }
     };
     fetchData();
   }, [path, dispatch]);
+
+  // console.log("currentVideo", currentVideo);
 
   return (
     <Container>
