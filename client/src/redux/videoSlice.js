@@ -17,8 +17,8 @@ export const videoSlice = createSlice({
     },
     // if user is found, this is run
     fetchSuccess: (state, action) => {
-      state.loading = true;
-      state.currentUser = action.payload;
+      state.loading = false;
+      state.currentVideo = action.payload;
     },
     // else if no user, loginFailure is run
     fetchFailure: (state) => {
@@ -28,7 +28,6 @@ export const videoSlice = createSlice({
   },
 });
 
-export const { fetchStart, fetchSuccess, fetchFailure, logout } =
-  videoSlice.actions;
+export const { fetchStart, fetchSuccess, fetchFailure } = videoSlice.actions;
 
 export default videoSlice.reducer;
