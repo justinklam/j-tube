@@ -3,7 +3,7 @@ import User from "../models/User.js";
 import Video from "../models/Video.js";
 
 // Helper Function
-import { createError } from "../error";
+import { createError } from "../error.js";
 
 export const addVideo = async (req, res, next) => {
   const newVideo = new Video({ userId: req.user.id, ...req.body });
@@ -37,6 +37,7 @@ export const updateVideo = async (req, res, next) => {
   }
 };
 
+// Incomplete
 export const deleteVideo = async (req, res, next) => {
   try {
     const video = await Video.findById(req.params.id);
