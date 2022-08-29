@@ -2,8 +2,10 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import axios from "axios";
 import { format } from "timeago.js";
+// React Redux
 import { useDispatch, useSelector } from "react-redux";
 import { fetchFailure, fetchStart, fetchSuccess } from "../redux/videoSlice";
+// React Router Dom
 import { useLocation } from "react-router-dom";
 
 // Components
