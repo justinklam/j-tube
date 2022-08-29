@@ -135,6 +135,8 @@ const Video = () => {
         const channelRes = await axios.get(
           `/users/find/${videoRes.data.userId}`
         );
+        console.log("videoRes", videoRes);
+        console.log("channelRes", channelRes);
         setChannel(channelRes.data);
         dispatch(fetchSuccess(videoRes.data));
       } catch (err) {}
@@ -183,7 +185,7 @@ const Video = () => {
             {/* <Image src="https://yt3.ggpht.com/KNYElmLFGAOSZoBmxYGKKXhGHrT2e7Hmz3WsBerbam5uaDXFADAmT7htj3OcC-uK1O88lC9fQg=s88-c-k-c0x00ffffff-no-rj" /> */}
             <ChannelDetails>
               <ChannelName>{channel.name}</ChannelName>
-              <ChannelCounter>{channel.subscriber} subscribers</ChannelCounter>
+              <ChannelCounter>{channel.subscribers} subscribers</ChannelCounter>
               <Description>{currentVideo.description}</Description>
             </ChannelDetails>
           </ChannelInfo>
