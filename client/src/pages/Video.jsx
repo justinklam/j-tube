@@ -152,7 +152,9 @@ const Video = () => {
     fetchData();
   }, [path, dispatch]);
 
-  // console.log("currentVideo", currentVideo);
+  const handleLike = async () => {};
+
+  const handleDislike = async () => {};
 
   return (
     <Container>
@@ -174,7 +176,7 @@ const Video = () => {
             {currentVideo.views} views • {format(currentVideo.createdAt)}
           </Info>
           <Buttons>
-            <Button>
+            <Button onClick={handleLike}>
               {currentVideo.likes?.includes(currentUser?._id) ? (
                 <ThumbUp />
               ) : (
@@ -182,7 +184,7 @@ const Video = () => {
               )}{" "}
               {currentVideo.likes?.length}
             </Button>
-            <Button>
+            <Button onClick={handleDislike}>
               {currentVideo.dislikes?.includes(currentUser?._id) ? (
                 <ThumbDown />
               ) : (
