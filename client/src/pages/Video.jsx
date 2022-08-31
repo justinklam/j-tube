@@ -170,64 +170,68 @@ const Video = () => {
 
   return (
     <Container>
-      <Content>
-        <VideoWrapper>
-          <iframe
-            width="100%"
-            height="720"
-            src="https://www.youtube.com/embed/lTRiuFIWV54"
-            title="YouTube Video Player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-        </VideoWrapper>
-        <Title>{currentVideo.title}</Title>
-        <Details>
-          <Info>
-            {currentVideo.views} views • {format(currentVideo.createdAt)}
-          </Info>
-          <Buttons>
-            <Button onClick={handleLike}>
-              {currentVideo.likes?.includes(currentUser?._id) ? (
-                <ThumbUp />
-              ) : (
-                <ThumbUpAltOutlined />
-              )}{" "}
-              {currentVideo.likes?.length}
-            </Button>
-            <Button onClick={handleDislike}>
-              {currentVideo.dislikes?.includes(currentUser?._id) ? (
-                <ThumbDown />
-              ) : (
-                <ThumbDownOffAltOutlined />
-              )}{" "}
-              Dislike
-            </Button>
-            <Button>
-              <ReplayOutlined /> Share
-            </Button>
-            <Button>
-              <AddTaskOutlined /> Save
-            </Button>
-          </Buttons>
-        </Details>
-        <Hr />
-        <Channel>
-          <ChannelInfo>
-            <Image src={channel.img}></Image>
-            {/* <Image src="https://yt3.ggpht.com/KNYElmLFGAOSZoBmxYGKKXhGHrT2e7Hmz3WsBerbam5uaDXFADAmT7htj3OcC-uK1O88lC9fQg=s88-c-k-c0x00ffffff-no-rj" /> */}
-            <ChannelDetails>
-              <ChannelName>{channel.name}</ChannelName>
-              <ChannelCounter>{channel.subscribers} subscribers</ChannelCounter>
-              <Description>{currentVideo.description}</Description>
-            </ChannelDetails>
-          </ChannelInfo>
-          <Subscribe>Subscribe</Subscribe>
-        </Channel>
-        <Hr />
-        <Comments />
-      </Content>
+      {currentVideo && (
+        <Content>
+          <VideoWrapper>
+            <iframe
+              width="100%"
+              height="720"
+              src="https://www.youtube.com/embed/lTRiuFIWV54"
+              title="YouTube Video Player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </VideoWrapper>
+          <Title>{currentVideo.title}</Title>
+          <Details>
+            <Info>
+              {currentVideo.views} views • {format(currentVideo.createdAt)}
+            </Info>
+            <Buttons>
+              <Button onClick={handleLike}>
+                {currentVideo.likes?.includes(currentUser?._id) ? (
+                  <ThumbUp />
+                ) : (
+                  <ThumbUpAltOutlined />
+                )}{" "}
+                {currentVideo.likes?.length}
+              </Button>
+              <Button onClick={handleDislike}>
+                {currentVideo.dislikes?.includes(currentUser?._id) ? (
+                  <ThumbDown />
+                ) : (
+                  <ThumbDownOffAltOutlined />
+                )}{" "}
+                Dislike
+              </Button>
+              <Button>
+                <ReplayOutlined /> Share
+              </Button>
+              <Button>
+                <AddTaskOutlined /> Save
+              </Button>
+            </Buttons>
+          </Details>
+          <Hr />
+          <Channel>
+            <ChannelInfo>
+              <Image src={channel.img}></Image>
+              {/* <Image src="https://yt3.ggpht.com/KNYElmLFGAOSZoBmxYGKKXhGHrT2e7Hmz3WsBerbam5uaDXFADAmT7htj3OcC-uK1O88lC9fQg=s88-c-k-c0x00ffffff-no-rj" /> */}
+              <ChannelDetails>
+                <ChannelName>{channel.name}</ChannelName>
+                <ChannelCounter>
+                  {channel.subscribers} subscribers
+                </ChannelCounter>
+                <Description>{currentVideo.description}</Description>
+              </ChannelDetails>
+            </ChannelInfo>
+            <Subscribe>Subscribe</Subscribe>
+          </Channel>
+          <Hr />
+          <Comments />
+        </Content>
+      )}
       {/* <Recommendation>
         <Card type="sm" />
         <Card type="sm" />
