@@ -145,8 +145,8 @@ const Video = () => {
         const channelRes = await axios.get(
           `/users/find/${videoRes.data.userId}`
         );
-        console.log("videoRes", videoRes);
-        console.log("channelRes", channelRes);
+        // console.log("videoRes", videoRes);
+        // console.log("channelRes", channelRes);
         // console.log("currentVideo", currentVideo);
         // console.log("currentVideo.title", currentVideo.title);
         setChannel(channelRes.data);
