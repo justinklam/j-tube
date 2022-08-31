@@ -38,9 +38,23 @@ export const videoSlice = createSlice({
         );
       }
     },
+    dislike: (state, action) => {
+      // if there was no likes before
+      if (!state.currentVideo.dislikes.includes(action.payload)) {
+        state.currentVideo.dislikes.push(action.payload);
+        // locate userId index
+        state.currentVideo.likes.splice(
+          state.currentVideo.like.findIndex(
+            (userId) => userId === action.payload
+          ),
+          1
+        );
+      }
+    },
   },
 });
 
-export const { fetchStart, fetchSuccess, fetchFailure } = videoSlice.actions;
+export const { fetchStart, fetchSuccess, fetchFailure, like, dislike } =
+  videoSlice.actions;
 
 export default videoSlice.reducer;
