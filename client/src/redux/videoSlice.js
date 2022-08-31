@@ -29,6 +29,13 @@ export const videoSlice = createSlice({
       // if there wa no likes before
       if (!state.currentVideo.likes.includes(action.payload)) {
         state.currentVideo.likes.push(action.payload);
+        // locate userId index
+        state.currentVideo.dislikes.splice(
+          state.currentVideo.dislike.findIndex(
+            (userId) => userId === action.payload
+          ),
+          1
+        );
       }
     },
   },
