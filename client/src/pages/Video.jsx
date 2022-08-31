@@ -4,7 +4,12 @@ import axios from "axios";
 import { format } from "timeago.js";
 // React Redux
 import { useDispatch, useSelector } from "react-redux";
-import { fetchFailure, fetchStart, fetchSuccess } from "../redux/videoSlice";
+import {
+  fetchFailure,
+  fetchStart,
+  fetchSuccess,
+  like,
+} from "../redux/videoSlice";
 // React Router Dom
 import { useLocation } from "react-router-dom";
 
@@ -154,6 +159,7 @@ const Video = () => {
 
   const handleLike = async () => {
     await axios.put(`/users/like/${currentVideo._id}`);
+    dispatch(like(currentUser._id));
   };
 
   const handleDislike = async () => {
