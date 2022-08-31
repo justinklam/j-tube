@@ -26,12 +26,12 @@ export const videoSlice = createSlice({
       state.error = true;
     },
     like: (state, action) => {
-      // if there wa no likes before
+      // if there was no likes before
       if (!state.currentVideo.likes.includes(action.payload)) {
         state.currentVideo.likes.push(action.payload);
         // locate userId index
         state.currentVideo.dislikes.splice(
-          state.currentVideo.dislike.findIndex(
+          state.currentVideo.dislikes.findIndex(
             (userId) => userId === action.payload
           ),
           1
