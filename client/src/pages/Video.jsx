@@ -16,9 +16,10 @@ import Card from "../components/Card";
 import {
   AddTaskOutlined,
   ReplayOutlined,
+  ThumbDown,
   ThumbDownOffAltOutlined,
-  ThumbUpAltOutlined,
   ThumbUp,
+  ThumbUpAltOutlined,
 } from "@mui/icons-material";
 
 const Container = styled.div`
