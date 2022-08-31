@@ -4,3 +4,6 @@ client/node_modules
 
 server/.env
 client/.env
+
+# Unused Code
+client/src/pages/unused
