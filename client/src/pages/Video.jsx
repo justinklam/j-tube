@@ -18,6 +18,7 @@ import {
   ReplayOutlined,
   ThumbDownOffAltOutlined,
   ThumbUpAltOutlined,
+  ThumbUp,
 } from "@mui/icons-material";
 
 const Container = styled.div`
@@ -173,7 +174,12 @@ const Video = () => {
           </Info>
           <Buttons>
             <Button>
-              <ThumbUpAltOutlined /> {currentVideo.likes?.length}
+              {currentVideo.likes?.includes(currentUser?._id) ? (
+                <ThumbUp />
+              ) : (
+                <ThumbUpAltOutlined />
+              )}{" "}
+              {currentVideo.likes?.length}
             </Button>
             <Button>
               <ThumbDownOffAltOutlined /> Dislike
