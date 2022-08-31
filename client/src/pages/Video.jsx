@@ -183,7 +183,12 @@ const Video = () => {
               {currentVideo.likes?.length}
             </Button>
             <Button>
-              <ThumbDownOffAltOutlined /> Dislike
+              {currentVideo.dislikes?.includes(currentUser?._id) ? (
+                <ThumbDown />
+              ) : (
+                <ThumbDownOffAltOutlined />
+              )}{" "}
+              Dislike
             </Button>
             <Button>
               <ReplayOutlined /> Share
