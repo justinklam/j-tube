@@ -5,6 +5,7 @@ import { format } from "timeago.js";
 // React Redux
 import { useDispatch, useSelector } from "react-redux";
 import {
+  dislike,
   fetchFailure,
   fetchStart,
   fetchSuccess,
@@ -164,6 +165,7 @@ const Video = () => {
 
   const handleDislike = async () => {
     await axios.put(`/users/dislike/${currentVideo._id}`);
+    dispatch(dislike(currentUser._id));
   };
 
   return (
