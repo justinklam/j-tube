@@ -152,9 +152,13 @@ const Video = () => {
     fetchData();
   }, [path, dispatch]);
 
-  const handleLike = async () => {};
+  const handleLike = async () => {
+    await axios.put(`/users/like/${currentVideo._id}`);
+  };
 
-  const handleDislike = async () => {};
+  const handleDislike = async () => {
+    await axios.put(`/users/dislike/${currentVideo._id}`);
+  };
 
   return (
     <Container>
