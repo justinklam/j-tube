@@ -44,7 +44,7 @@ export const videoSlice = createSlice({
         state.currentVideo.dislikes.push(action.payload);
         // locate userId index
         state.currentVideo.likes.splice(
-          state.currentVideo.like.findIndex(
+          state.currentVideo.likes.findIndex(
             (userId) => userId === action.payload
           ),
           1
