@@ -36,14 +36,17 @@ export const userSlice = createSlice({
         state.currentUser.subscribedUser.splice(
           state.currentUser.subscribedUsers.findIndex(
             (channelId) => channelId === action.payload
-          )
+          ),
+          1
         );
+      } else {
+        state.currentUser.subscribedUsers.push(action.payload);
       }
     },
   },
 });
 
-export const { loginStart, loginSuccess, loginFailure, logout } =
+export const { loginStart, loginSuccess, loginFailure, logout, subscription } =
   userSlice.actions;
 
 export default userSlice.reducer;
