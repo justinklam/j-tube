@@ -11,6 +11,7 @@ import {
   fetchSuccess,
   like,
 } from "../redux/videoSlice";
+import { subscription } from "../redux/userSlice";
 // React Router Dom
 import { useLocation } from "react-router-dom";
 
@@ -168,6 +169,11 @@ const Video = () => {
     dispatch(dislike(currentUser._id));
   };
 
+  const handleSub = async () => {
+    await axios.put(`/users/sub/${channel._id}`);
+    dispatch(subscription(channel._id));
+  };
+
   return (
     <Container>
       {currentVideo && (
@@ -226,7 +232,7 @@ const Video = () => {
                 <Description>{currentVideo.description}</Description>
               </ChannelDetails>
             </ChannelInfo>
-            <Subscribe>
+            <Subscribe onClick={handleSub}>
               {/* if current user is subscribed to this channelID, display Subscribed else Subscribe */}
               {currentUser.subscribedUsers?.includes(channel._id)
                 ? "SUBSCRIBED"
