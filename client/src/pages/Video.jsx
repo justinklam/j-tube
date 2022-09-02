@@ -170,7 +170,10 @@ const Video = () => {
   };
 
   const handleSub = async () => {
-    await axios.put(`/users/sub/${channel._id}`);
+    // if currentUser's includes the channelId in subscribedUsers, unsub, else sub
+    currentUser.subscribedUsers.includes(channel._id)
+      ? await axios.put(`/users/unsub/${channel._id}`)
+      : await axios.put(`/users/sub/${channel._id}`);
     dispatch(subscription(channel._id));
   };
 
