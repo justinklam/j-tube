@@ -226,7 +226,12 @@ const Video = () => {
                 <Description>{currentVideo.description}</Description>
               </ChannelDetails>
             </ChannelInfo>
-            <Subscribe>Subscribe</Subscribe>
+            <Subscribe>
+              {/* if current user is subscribed to this channelID, display Subscribed else Subscribe */}
+              {currentUser.subscribedUsers?.includes(channel._id)
+                ? "SUBSCRIBED"
+                : "SUBSCRIBE"}
+            </Subscribe>
           </Channel>
           <Hr />
           <Comments />
