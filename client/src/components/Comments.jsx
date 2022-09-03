@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 // Components
@@ -28,6 +28,8 @@ const Input = styled.input`
 `;
 
 const Comments = () => {
+  const [comments, setComments] = useState([]);
+
   return (
     <Container>
       <NewComment>
