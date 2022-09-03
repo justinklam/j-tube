@@ -4,6 +4,8 @@ import styled from "styled-components";
 
 // Components
 import Comment from "./Comment";
+//Redux
+import { useSelector } from "react-redux";
 
 const Container = styled.div``;
 
@@ -29,6 +31,8 @@ const Input = styled.input`
 `;
 
 const Comments = ({ videoId }) => {
+  const { currentUser } = useSelector((state) => state.user);
+
   const [comments, setComments] = useState([]);
 
   useEffect(() => {
@@ -44,7 +48,8 @@ const Comments = ({ videoId }) => {
   return (
     <Container>
       <NewComment>
-        <Avatar src="https://images.pexels.com/photos/2071881/pexels-photo-2071881.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+        <Avatar src={currentUser.img} />
+        {/* <Avatar src="https://images.pexels.com/photos/2071881/pexels-photo-2071881.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" /> */}
         <Input placeholder="Add a comment..."></Input>
       </NewComment>
       {comments.map((comment) => (
