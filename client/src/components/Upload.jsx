@@ -32,7 +32,11 @@ const Close = styled.div`
   cursor: pointer;
 `;
 
-const Title = styled.h1``;
+const Title = styled.h1`
+  text-align: center;
+`;
+
+const Input = styled.input``;
 
 const Upload = ({ setOpen }) => {
   return (
