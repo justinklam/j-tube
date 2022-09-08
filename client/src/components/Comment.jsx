@@ -43,16 +43,19 @@ const Comment = ({ comment }) => {
   useEffect(() => {
     const fetchComment = async () => {
       const res = await axios.get(`/users/find/${comment.userId}`);
+      setChannel(res.data);
     };
     fetchComment();
   }, [comment.userId]);
 
   return (
     <Container>
-      <Avatar src="https://images.pexels.com/photos/2071881/pexels-photo-2071881.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+      {/* <Avatar src="https://images.pexels.com/photos/2071881/pexels-photo-2071881.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" /> */}
+      <Avatar src={channel.img} />
       <Details>
         <Name>
-          J1<Date>1 Day Ago</Date>
+          {channel.name}
+          <Date>1 Day Ago</Date>
         </Name>
         <Text>{comment.description}</Text>
       </Details>
