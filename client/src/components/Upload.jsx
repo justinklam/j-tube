@@ -36,7 +36,13 @@ const Title = styled.h1`
   text-align: center;
 `;
 
-const Input = styled.input``;
+const Input = styled.input`
+  border: 1px solid ${({ theme }) => theme.soft};
+  color: ${({ theme }) => theme.text};
+  border-radius: 3px;
+  padding: 10px;
+  background-color: transparent;
+`;
 
 const Upload = ({ setOpen }) => {
   return (
@@ -44,6 +50,7 @@ const Upload = ({ setOpen }) => {
       <Wrapper>
         <Close onClick={() => setOpen(false)}>X</Close>
         <Title>Upload a New Video</Title>
+        <Input />
       </Wrapper>
     </Container>
   );
