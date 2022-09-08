@@ -25,7 +25,12 @@ const Wrapper = styled.div`
   position: relative;
 `;
 
-const Close = styled.div``;
+const Close = styled.div`
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+`;
 
 const Title = styled.h1``;
 
