@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import styled from "styled-components";
@@ -73,6 +73,7 @@ const Avatar = styled.img`
 `;
 
 const Navbar = () => {
+  const [open, setOpen] = useState(false);
   // Hook from Redux
   const { currentUser } = useSelector((state) => state.user);
 
@@ -86,7 +87,7 @@ const Navbar = () => {
         {/* if currentUser exists, display name else display signin button */}
         {currentUser ? (
           <User>
-            <VideoCallIcon />
+            <VideoCallIcon onClick={() => setOpen(true)} />
             <Avatar src={currentUser.img} />
             {currentUser.name}
           </User>
