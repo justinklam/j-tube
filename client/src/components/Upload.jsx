@@ -38,7 +38,7 @@ const Upload = ({ setOpen }) => {
   return (
     <Container>
       <Wrapper>
-        <Close>X</Close>
+        <Close onClick={() => setOpen(false)}>X</Close>
         <Title>Upload a New Video</Title>
       </Wrapper>
     </Container>
