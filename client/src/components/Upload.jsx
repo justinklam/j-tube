@@ -13,7 +13,12 @@ const Container = styled.div`
   justify-content: center;
 `;
 
-const Wrapper = styled.div``;
+const Wrapper = styled.div`
+  width: 600px;
+  height: 600px;
+  background-color: ${({ theme }) => theme.bgLighter};
+  color: ${({ theme }) => theme.text};
+`;
 
 const Close = styled.div``;
 
