@@ -18,6 +18,11 @@ const Wrapper = styled.div`
   height: 600px;
   background-color: ${({ theme }) => theme.bgLighter};
   color: ${({ theme }) => theme.text};
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
 `;
 
 const Close = styled.div``;
