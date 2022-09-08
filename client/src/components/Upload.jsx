@@ -8,6 +8,9 @@ const Container = styled.div`
   top: 0;
   left: 0;
   background-color: #000000a7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 const Wrapper = styled.div``;
