@@ -36,7 +36,7 @@ const Text = styled.span`
   font-size: 14px;
 `;
 
-const Comment = () => {
+const Comment = ({ comment }) => {
   return (
     <Container>
       <Avatar src="https://images.pexels.com/photos/2071881/pexels-photo-2071881.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
@@ -44,10 +44,7 @@ const Comment = () => {
         <Name>
           J1<Date>1 Day Ago</Date>
         </Name>
-        <Text>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod
-        </Text>
+        <Text>{comment.description}</Text>
       </Details>
     </Container>
   );
