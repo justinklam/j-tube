@@ -1,7 +1,16 @@
 import React from "react";
+import styled from "styled-components";
 
-const Upload = () => {
-  return <div>Upload</div>;
+const Container = styled.div``;
+
+const Wrapper = styled.div``;
+
+const Upload = ({ setOpen }) => {
+  return (
+    <Container>
+      <Wrapper></Wrapper>
+    </Container>
+  );
 };
 
 export default Upload;
