@@ -69,6 +69,8 @@ const Label = styled.label`
 const Upload = ({ setOpen }) => {
   const [img, setImg] = useState(undefined);
   const [video, setVideo] = useState(undefined);
+  const [imgPercentage, setImgPercentage] = useState(0);
+  const [vidPercentage, setVidPercentage] = useState(0);
 
   return (
     <Container>
