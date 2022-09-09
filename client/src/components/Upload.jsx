@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -67,6 +67,8 @@ const Label = styled.label`
 `;
 
 const Upload = ({ setOpen }) => {
+  const [video, setVideo] = useState(undefined);
+
   return (
     <Container>
       <Wrapper>
@@ -74,7 +76,11 @@ const Upload = ({ setOpen }) => {
         <Title>Upload a New Video</Title>
         <Label>Video</Label>
         {/* Input only acepts Video files */}
-        <Input type="file" accept="video/*" />
+        <Input
+          type="file"
+          accept="video/*"
+          onChange={(e) => setVideo(e.target.files[0])}
+        />
         <Input type="text" placeholder="Title" />
         <Description placeholder="Description" rows={8} />
         <Input type="text" placeholder="Separate the tags with commas." />
