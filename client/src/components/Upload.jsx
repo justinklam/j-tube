@@ -44,6 +44,14 @@ const Input = styled.input`
   background-color: transparent;
 `;
 
+const Description = styled.textarea`
+  border: 1px solid ${({ theme }) => theme.soft};
+  color: ${({ theme }) => theme.text};
+  border-radius: 3px;
+  padding: 10px;
+  background-color: transparent;
+`;
+
 const Upload = ({ setOpen }) => {
   return (
     <Container>
@@ -53,6 +61,7 @@ const Upload = ({ setOpen }) => {
         {/* Input only acepts Video files */}
         <Input type="file" accept="video/*" />
         <Input type="text" placeholoder="Title" />
+        <Description placeholder="Description" rows={8} />
       </Wrapper>
     </Container>
   );
