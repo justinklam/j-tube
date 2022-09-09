@@ -67,6 +67,7 @@ const Label = styled.label`
 `;
 
 const Upload = ({ setOpen }) => {
+  const [img, setImg] = useState(undefined);
   const [video, setVideo] = useState(undefined);
 
   return (
@@ -85,7 +86,11 @@ const Upload = ({ setOpen }) => {
         <Description placeholder="Description" rows={8} />
         <Input type="text" placeholder="Separate the tags with commas." />
         <Label>Thumbnail Image</Label>
-        <Input type="file" accept="image/*" />
+        <Input
+          type="file"
+          accept="image/*"
+          onChange={(e) => setImg(e.target.files[0])}
+        />
         <Button>Upload</Button>
       </Wrapper>
     </Container>
