@@ -60,7 +60,7 @@ const Upload = ({ setOpen }) => {
         <Title>Upload a New Video</Title>
         {/* Input only acepts Video files */}
         <Input type="file" accept="video/*" />
-        <Input type="text" placeholoder="Title" />
+        <Input type="text" placeholder="Title" />
         <Description placeholder="Description" rows={8} />
       </Wrapper>
     </Container>
