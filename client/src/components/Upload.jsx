@@ -50,7 +50,9 @@ const Upload = ({ setOpen }) => {
       <Wrapper>
         <Close onClick={() => setOpen(false)}>X</Close>
         <Title>Upload a New Video</Title>
-        <Input />
+        {/* Input only acepts Video files */}
+        <Input type="file" accept="video/*" />
+        <Input type="text" placeholoder="Title" />
       </Wrapper>
     </Container>
   );
