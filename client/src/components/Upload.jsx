@@ -62,17 +62,23 @@ const Button = styled.button`
   color: ${({ theme }) => theme.textSoft};
 `;
 
+const Label = styled.label`
+  font-size: 14px;
+`;
+
 const Upload = ({ setOpen }) => {
   return (
     <Container>
       <Wrapper>
         <Close onClick={() => setOpen(false)}>X</Close>
         <Title>Upload a New Video</Title>
+        <Label>Video</Label>
         {/* Input only acepts Video files */}
         <Input type="file" accept="video/*" />
         <Input type="text" placeholder="Title" />
         <Description placeholder="Description" rows={8} />
         <Input type="text" placeholder="Separate the tags with commas." />
+        <Label>Thumbnail Image</Label>
         <Input type="file" accept="image/*" />
         <Button>Upload</Button>
       </Wrapper>
