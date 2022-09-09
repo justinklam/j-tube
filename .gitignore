@@ -6,4 +6,6 @@ client/node_modules
 /client/.env
 
 # Unused Code
-client/src/pages/unused
+/client/src/pages/unused
+
+/client/src/firebase.js

@@ -52,6 +52,16 @@ const Description = styled.textarea`
   background-color: transparent;
 `;
 
+const Button = styled.button`
+  border-radius: 3px;
+  border: none;
+  padding: 10px 20px;
+  font-weight: 500;
+  cursor: pointer;
+  background-color: ${({ theme }) => theme.soft};
+  color: ${({ theme }) => theme.textSoft};
+`;
+
 const Upload = ({ setOpen }) => {
   return (
     <Container>
@@ -64,6 +74,7 @@ const Upload = ({ setOpen }) => {
         <Description placeholder="Description" rows={8} />
         <Input type="text" placeholder="Separate the tags with commas." />
         <Input type="file" accept="image/*" />
+        <Button>Upload</Button>
       </Wrapper>
     </Container>
   );
