@@ -62,6 +62,8 @@ const Upload = ({ setOpen }) => {
         <Input type="file" accept="video/*" />
         <Input type="text" placeholder="Title" />
         <Description placeholder="Description" rows={8} />
+        <Input type="text" placeholder="Separate the tags with commas." />
+        <Input type="file" accept="image/*" />
       </Wrapper>
     </Container>
   );
