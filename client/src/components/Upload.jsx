@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useEffect } from "react";
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -70,8 +71,8 @@ const Upload = ({ setOpen }) => {
   const [imgPercentage, setImgPercentage] = useState(0);
   const [vidPercentage, setVidPercentage] = useState(0);
 
-  const [img, setImg] = useState(undefined);
   const [video, setVideo] = useState(undefined);
+  const [img, setImg] = useState(undefined);
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [tags, setTags] = useState([]);
@@ -79,6 +80,18 @@ const Upload = ({ setOpen }) => {
   const handleTags = (e) => {
     setTags(e.target.value.split(","));
   };
+
+  const uploadFile = (file) => {};
+
+  // For Video
+  useEffect(() => {
+    uploadFile(video);
+  }, [video]);
+
+  // For Image
+  useEffect(() => {
+    uploadFile(img);
+  }, [img]);
 
   return (
     <Container>
