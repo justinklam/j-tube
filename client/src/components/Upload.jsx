@@ -88,8 +88,16 @@ const Upload = ({ setOpen }) => {
           accept="video/*"
           onChange={(e) => setVideo(e.target.files[0])}
         />
-        <Input type="text" placeholder="Title" />
-        <Description placeholder="Description" rows={8} />
+        <Input
+          type="text"
+          placeholder="Title"
+          onChange={(e) => setTitle(e.target.value)}
+        />
+        <Description
+          placeholder="Description"
+          rows={8}
+          onChange={(e) => setDescription(e.target.value)}
+        />
         <Input type="text" placeholder="Separate the tags with commas." />
         <Label>Thumbnail Image</Label>
         <Input
