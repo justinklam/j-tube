@@ -81,9 +81,10 @@ const Upload = ({ setOpen }) => {
 
   const [video, setVideo] = useState(undefined);
   const [img, setImg] = useState(undefined);
-  const [title, setTitle] = useState("");
-  const [description, setDescription] = useState("");
+  const [inputs, setInputs] = useState({});
   const [tags, setTags] = useState([]);
+
+  const handleChange = (e) => {};
 
   const handleTags = (e) => {
     setTags(e.target.value.split(","));
@@ -139,14 +140,16 @@ const Upload = ({ setOpen }) => {
           onChange={(e) => setVideo(e.target.files[0])}
         />
         <Input
+          name="title"
           type="text"
           placeholder="Title"
-          onChange={(e) => setTitle(e.target.value)}
+          onChange={handleChange()}
         />
         <Description
+          name="description"
           placeholder="Description"
           rows={8}
-          onChange={(e) => setDescription(e.target.value)}
+          onChange={handleChange()}
         />
         <Input
           type="text"
