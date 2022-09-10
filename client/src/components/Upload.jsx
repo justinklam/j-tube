@@ -84,7 +84,12 @@ const Upload = ({ setOpen }) => {
   const [inputs, setInputs] = useState({});
   const [tags, setTags] = useState([]);
 
-  const handleChange = (e) => {};
+  const handleChange = (e) => {
+    setInputs((prev) => {
+      // take previous item's title/description and change it to the new value
+      return { ...prev, [e.target.name]: e.target.value };
+    });
+  };
 
   const handleTags = (e) => {
     setTags(e.target.value.split(","));
