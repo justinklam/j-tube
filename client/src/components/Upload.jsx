@@ -76,6 +76,10 @@ const Upload = ({ setOpen }) => {
   const [description, setDescription] = useState("");
   const [tags, setTags] = useState([]);
 
+  const handleTags = (e) => {
+    setTags(e.target.value.split(","));
+  };
+
   return (
     <Container>
       <Wrapper>
@@ -98,7 +102,11 @@ const Upload = ({ setOpen }) => {
           rows={8}
           onChange={(e) => setDescription(e.target.value)}
         />
-        <Input type="text" placeholder="Separate the tags with commas." />
+        <Input
+          type="text"
+          placeholder="Separate the tags with commas."
+          onChange={handleTags}
+        />
         <Label>Thumbnail Image</Label>
         <Input
           type="file"
