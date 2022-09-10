@@ -2,6 +2,14 @@ import React, { useState } from "react";
 import { useEffect } from "react";
 import styled from "styled-components";
 
+// Firebase
+import {
+  getStorage,
+  ref,
+  uploadBytesResumable,
+  getDownloadURL,
+} from "firebase/storage";
+
 const Container = styled.div`
   width: 100%;
   height: 100%;
@@ -81,7 +89,12 @@ const Upload = ({ setOpen }) => {
     setTags(e.target.value.split(","));
   };
 
-  const uploadFile = (file) => {};
+  const uploadFile = (file) => {
+    const storage = getStorage();
+    // Filename will use Date + file name to avoid conflicts
+    const fileName = new Date().getTime + file.name;
+    const storageRef = ref(storage, file.name);
+  };
 
   // For Video
   useEffect(() => {
