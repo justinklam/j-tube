@@ -136,12 +136,12 @@ const Upload = ({ setOpen }) => {
 
   // For Video
   useEffect(() => {
-    video && uploadFile(video);
+    video && uploadFile(video, "videoURL");
   }, [video]);
 
   // For Image
   useEffect(() => {
-    img && uploadFile(img);
+    img && uploadFile(img, "imgURL");
   }, [img]);
 
   return (
@@ -152,7 +152,7 @@ const Upload = ({ setOpen }) => {
         <Label>Video</Label>
         {/* Input only acepts Video files */}
         {vidPercentage > 0 ? (
-          "Uploading:" + vidPercentage
+          "Uploading:" + vidPercentage + "%"
         ) : (
           <Input
             type="file"
@@ -179,7 +179,7 @@ const Upload = ({ setOpen }) => {
         />
         <Label>Thumbnail Image</Label>
         {imgPercentage > 0 ? (
-          "Uploading:" + imgPercentage
+          "Uploading:" + imgPercentage + "%"
         ) : (
           <Input
             type="file"
