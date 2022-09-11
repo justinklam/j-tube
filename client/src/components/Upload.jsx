@@ -98,8 +98,9 @@ const Upload = ({ setOpen }) => {
   const uploadFile = (file, urlType) => {
     const storage = getStorage();
     // Filename will use Date + file name to avoid conflicts
-    const fileName = new Date().getTime + file.name;
+    const fileName = new Date().getTime() + file.name;
     const storageRef = ref(storage, fileName);
+    const uploadTask = uploadBytesResumable(storageRef, file);
 
     uploadTask.on(
       "state_changed",
