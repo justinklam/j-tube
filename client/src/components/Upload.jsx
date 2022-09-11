@@ -149,11 +149,15 @@ const Upload = ({ setOpen }) => {
         <Title>Upload a New Video</Title>
         <Label>Video</Label>
         {/* Input only acepts Video files */}
-        <Input
-          type="file"
-          accept="video/*"
-          onChange={(e) => setVideo(e.target.files[0])}
-        />
+        {videoPerc > 0 ? (
+          "Uploading:" + videoPerc
+        ) : (
+          <Input
+            type="file"
+            accept="video/*"
+            onChange={(e) => setVideo(e.target.files[0])}
+          />
+        )}
         <Input
           name="title"
           type="text"
