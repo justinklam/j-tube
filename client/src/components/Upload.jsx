@@ -120,7 +120,15 @@ const Upload = ({ setOpen }) => {
         }
       },
       (error) => {},
-      () => {}
+      () => {
+        // If upload was successful, get downloadURL
+        getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
+          setInputs((prev) => {
+            // take previous item's title/description, spread and add urlType
+            return { ...prev, urlType: downloadURL };
+          });
+        });
+      }
     );
   };
 
