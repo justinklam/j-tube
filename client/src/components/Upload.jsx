@@ -149,8 +149,8 @@ const Upload = ({ setOpen }) => {
         <Title>Upload a New Video</Title>
         <Label>Video</Label>
         {/* Input only acepts Video files */}
-        {videoPerc > 0 ? (
-          "Uploading:" + videoPerc
+        {vidPercentage > 0 ? (
+          "Uploading:" + vidPercentage
         ) : (
           <Input
             type="file"
@@ -176,11 +176,15 @@ const Upload = ({ setOpen }) => {
           onChange={handleTags}
         />
         <Label>Thumbnail Image</Label>
-        <Input
-          type="file"
-          accept="image/*"
-          onChange={(e) => setImg(e.target.files[0])}
-        />
+        {imgPercentage > 0 ? (
+          "Uploading:" + imgPercentage
+        ) : (
+          <Input
+            type="file"
+            accept="image/*"
+            onChange={(e) => setImg(e.target.files[0])}
+          />
+        )}
         <Button>Upload</Button>
       </Wrapper>
     </Container>
