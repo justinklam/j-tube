@@ -134,12 +134,12 @@ const Upload = ({ setOpen }) => {
 
   // For Video
   useEffect(() => {
-    uploadFile(video);
+    video && uploadFile(video);
   }, [video]);
 
   // For Image
   useEffect(() => {
-    uploadFile(img);
+    img && uploadFile(img);
   }, [img]);
 
   return (
