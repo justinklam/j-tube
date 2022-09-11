@@ -9,6 +9,7 @@ import {
   uploadBytesResumable,
   getDownloadURL,
 } from "firebase/storage";
+import app from "../firebase";
 
 const Container = styled.div`
   width: 100%;
@@ -96,7 +97,7 @@ const Upload = ({ setOpen }) => {
   };
 
   const uploadFile = (file, urlType) => {
-    const storage = getStorage();
+    const storage = getStorage(app);
     // Filename will use Date + file name to avoid conflicts
     const fileName = new Date().getTime() + file.name;
     const storageRef = ref(storage, fileName);
@@ -126,7 +127,7 @@ const Upload = ({ setOpen }) => {
         getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
           setInputs((prev) => {
             // take previous item's title/description, spread and add urlType
-            return { ...prev, urlType: downloadURL };
+            return { ...prev, [urlType]: downloadURL };
           });
         });
       }
