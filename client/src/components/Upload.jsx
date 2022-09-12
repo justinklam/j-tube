@@ -168,13 +168,13 @@ const Upload = ({ setOpen }) => {
           name="title"
           type="text"
           placeholder="Title"
-          onChange={handleChange()}
+          onChange={handleChange}
         />
         <Description
           name="description"
           placeholder="Description"
           rows={8}
-          onChange={handleChange()}
+          onChange={handleChange}
         />
         <Input
           type="text"
