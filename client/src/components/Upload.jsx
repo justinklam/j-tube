@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
+import axios from "axios";
 
 // Firebase
 import {
@@ -146,6 +146,8 @@ const Upload = ({ setOpen }) => {
 
   const handleUpload = async (e) => {
     e.preventDeafult();
+    const res = await axios.post("/video", { ...inputs, tags });
+    setOpen(false);
   };
 
   return (
