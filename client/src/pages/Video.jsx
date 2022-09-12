@@ -188,16 +188,7 @@ const Video = () => {
       {currentVideo && (
         <Content>
           <VideoWrapper>
-            <VideoFrame src={currentVideo.videoUrl} />
-            {/* <iframe
-              width="100%"
-              height="720"
-              src="https://www.youtube.com/embed/lTRiuFIWV54"
-              title="YouTube Video Player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe> */}
+            <VideoFrame src={currentVideo.videoUrl} controls />
           </VideoWrapper>
           <Title>{currentVideo.title}</Title>
           <Details>
