@@ -76,10 +76,6 @@ const Hr = styled.hr`
   border: 0.5px solid ${({ theme }) => theme.soft};
 `;
 
-const Recommendation = styled.div`
-  flex: 2;
-`;
-
 const Channel = styled.div`
   display: flex;
   justify-content: space-between;
