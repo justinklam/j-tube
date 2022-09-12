@@ -11,6 +11,9 @@ import {
 } from "firebase/storage";
 import app from "../firebase";
 
+// React Router Dom
+import { useNavigate } from "react-router-dom";
+
 const Container = styled.div`
   width: 100%;
   height: 100%;
@@ -85,6 +88,8 @@ const Upload = ({ setOpen }) => {
   const [inputs, setInputs] = useState({});
   const [tags, setTags] = useState([]);
 
+  const navigate = useNavigate();
+
   const handleChange = (e) => {
     setInputs((prev) => {
       // take previous item's title/description and change it to the new value
@@ -148,6 +153,7 @@ const Upload = ({ setOpen }) => {
     e.preventDeafult();
     const res = await axios.post("/video", { ...inputs, tags });
     setOpen(false);
+    res.status === 200 && navigate(`/video/${res.data._id}`);
   };
 
   return (
