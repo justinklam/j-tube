@@ -144,6 +144,10 @@ const Upload = ({ setOpen }) => {
     img && uploadFile(img, "imgURL");
   }, [img]);
 
+  const handleUpload = async (e) => {
+    e.preventDeafult();
+  };
+
   return (
     <Container>
       <Wrapper>
@@ -187,7 +191,7 @@ const Upload = ({ setOpen }) => {
             onChange={(e) => setImg(e.target.files[0])}
           />
         )}
-        <Button>Upload</Button>
+        <Button onClick={handleUpload}>Upload</Button>
       </Wrapper>
     </Container>
   );
