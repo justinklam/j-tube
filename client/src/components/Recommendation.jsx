@@ -1,6 +1,6 @@
-import axios from "axios";
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
+import axios from "axios";
 
 const Container = styled.div``;
 
@@ -15,7 +15,7 @@ const Recommendation = () => {
     fetchVideos();
   }, [tags]);
 
-  return <div>Recommendation</div>;
+  return <Container></Container>;
 };
 
 export default Recommendation;

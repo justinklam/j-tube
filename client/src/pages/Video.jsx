@@ -18,6 +18,7 @@ import { useLocation } from "react-router-dom";
 // Components
 import Comments from "../components/Comments";
 import Card from "../components/Card";
+import Recommendation from "../components/Recommendation";
 
 // MUI
 import {
@@ -240,6 +241,7 @@ const Video = () => {
           <Comments videoId={currentVideo._id} />
         </Content>
       )}
+      <Recommendation />
       {/* <Recommendation>
         <Card type="sm" />
         <Card type="sm" />
