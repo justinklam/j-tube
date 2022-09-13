@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import {
   dislike,
   fetchFailure,
-  fetchStart,
+  // fetchStart,
   fetchSuccess,
   like,
 } from "../redux/videoSlice";
@@ -17,7 +17,7 @@ import { useLocation } from "react-router-dom";
 
 // Components
 import Comments from "../components/Comments";
-import Card from "../components/Card";
+// import Card from "../components/Card";
 import Recommendation from "../components/Recommendation";
 
 // MUI
@@ -242,13 +242,6 @@ const Video = () => {
         </Content>
       )}
       <Recommendation />
-      {/* <Recommendation>
-        <Card type="sm" />
-        <Card type="sm" />
-        <Card type="sm" />
-        <Card type="sm" />
-        <Card type="sm" />
-      </Recommendation> */}
     </Container>
   );
 };
