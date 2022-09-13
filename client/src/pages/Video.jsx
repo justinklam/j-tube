@@ -241,7 +241,7 @@ const Video = () => {
           <Comments videoId={currentVideo._id} />
         </Content>
       )}
-      <Recommendation />
+      <Recommendation tags={currentVideo.tags} />
     </Container>
   );
 };
