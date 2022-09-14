@@ -96,7 +96,9 @@ const Navbar = () => {
               placeholder="Search"
               onChange={(e) => setQuery(e.target.value)}
             />
-            <SearchOutlinedIcon onClick={() => navigate("/search")} />
+            <SearchOutlinedIcon
+              onClick={() => navigate(`/search?q=${query}`)}
+            />
           </Search>
           {/* if currentUser exists, display name else display signin button */}
           {currentUser ? (
