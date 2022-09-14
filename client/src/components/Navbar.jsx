@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 // Components
@@ -84,6 +84,8 @@ const Navbar = () => {
 
   // Hook from Redux
   const { currentUser } = useSelector((state) => state.user);
+  // Hook from React Router Dom
+  const navigate = useNavigate();
 
   return (
     <>
@@ -94,7 +96,7 @@ const Navbar = () => {
               placeholder="Search"
               onChange={(e) => setQuery(e.target.value)}
             />
-            <SearchOutlinedIcon />
+            <SearchOutlinedIcon onClick={() => navigate("/search")} />
           </Search>
           {/* if currentUser exists, display name else display signin button */}
           {currentUser ? (
