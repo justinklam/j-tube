@@ -80,6 +80,8 @@ const Avatar = styled.img`
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const [query, setQuery] = useState("");
+
   // Hook from Redux
   const { currentUser } = useSelector((state) => state.user);
 
@@ -88,7 +90,10 @@ const Navbar = () => {
       <Container>
         <Wrapper>
           <Search>
-            <Input placeholder="Search" />
+            <Input
+              placeholder="Search"
+              onChange={(e) => setQuery(e.target.value)}
+            />
             <SearchOutlinedIcon />
           </Search>
           {/* if currentUser exists, display name else display signin button */}
