@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
+import axios from "axios";
 
 const Container = styled.div`
   display: flex;
@@ -8,7 +9,13 @@ const Container = styled.div`
 `;
 
 const Search = () => {
-  const [videos, setVideos] = useState();
+  const [videos, setVideos] = useState([]);
+
+  useEffect(() => {
+    const fetchVideos = async () => {
+      const res = await axios.get(`/videos/search`);
+    };
+  }, []);
 
   return <Container />;
 };
