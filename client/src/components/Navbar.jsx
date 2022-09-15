@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+
+// React Router Dom
 import { Link, useNavigate } from "react-router-dom";
+
+// React Redux
 import { useSelector } from "react-redux";
 
 // Components
