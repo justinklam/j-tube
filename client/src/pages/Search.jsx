@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import axios from "axios";
+
 // React Router Dom
 import { useLocation } from "react-router-dom";
 
@@ -15,6 +16,7 @@ const Container = styled.div`
 
 const Search = () => {
   const [videos, setVideos] = useState([]);
+  // React router dom hook
   const query = useLocation().search;
 
   useEffect(() => {
