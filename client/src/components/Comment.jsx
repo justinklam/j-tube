@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
 import styled from "styled-components";
+import axios from "axios";
 
 const Container = styled.div`
   display: flex;

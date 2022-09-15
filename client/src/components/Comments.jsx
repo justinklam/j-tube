@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
 import styled from "styled-components";
+import axios from "axios";
 
 // React Redux
 import { useSelector } from "react-redux";
