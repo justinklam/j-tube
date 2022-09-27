@@ -7,14 +7,14 @@
 
 ## Preview
 
-<p>Main Page</p>
+<!-- <p>Main Page</p>
 <img src=""  width="700" style="border-radius:10px;margin-bottom:1rem;" />
 <p>Video View</p>
 <img src=""  width="700" style="border-radius:10px;margin-bottom:1rem;" />
 <p>Upload</p>
 <img src=""  width="700" style="border-radius:10px;margin-bottom:1rem;" />
 <p>Register</p>
-<img src=""  width="700" style="border-radius:10px;margin-bottom:1rem;" />
+<img src=""  width="700" style="border-radius:10px;margin-bottom:1rem;" /> -->
 
 ### Tech stack
 
