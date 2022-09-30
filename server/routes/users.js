@@ -10,7 +10,7 @@ import {
 } from "../controllers/user.js";
 
 // Helper Function
-import { verifyToken } from "../verifyToken.js";
+import { verifyToken } from "../helpers/verifyToken.js";
 
 const router = express.Router();
 

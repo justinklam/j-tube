@@ -3,7 +3,7 @@ import User from "../models/User.js";
 import Video from "../models/Video.js";
 
 // Helper Function
-import { createError } from "../error.js";
+import { createError } from "../helpers/error.js";
 
 export const addVideo = async (req, res, next) => {
   const newVideo = new Video({ userId: req.user.id, ...req.body });
