@@ -6,7 +6,7 @@ import {
 } from "../controllers/comment.js";
 
 // Helper function
-import { verifyToken } from "../verifyToken.js";
+import { verifyToken } from "../helpers/verifyToken.js";
 
 const router = express.Router();
 

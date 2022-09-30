@@ -2,7 +2,7 @@
 import User from "../models/User.js";
 
 // Helper function
-import { createError } from "../error.js";
+import { createError } from "../helpers/error.js";
 import Video from "../models/Video.js";
 
 export const update = async (req, res, next) => {

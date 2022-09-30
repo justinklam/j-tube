@@ -3,7 +3,7 @@ import Video from "../models/Video.js";
 import Comment from "../models/Comment.js";
 
 // Helper functions
-import { createError } from "../error.js";
+import { createError } from "../helpers/error.js";
 
 export const addComment = async (req, res, next) => {
   const newComment = new Comment({ ...req.body, userId: req.user.id });

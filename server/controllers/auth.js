@@ -3,7 +3,7 @@ import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 
 // Helper function
-import { createError } from "../error.js";
+import { createError } from "../helpers/error.js";
 
 // Model
 import User from "../models/User.js";
